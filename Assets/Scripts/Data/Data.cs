@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
     [CreateAssetMenu(fileName = "Data", menuName = "Data/Data")]
