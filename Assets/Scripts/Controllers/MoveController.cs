@@ -11,17 +11,17 @@ namespace DefaultNamespace
         private readonly Transform _playerTransform;
         private readonly PlayerData _playerData;
         private readonly IInputChangeAxis _horizontalInput;
-        private readonly IInputChangeAxis _verticalInput;
         private readonly IInputKeyHold _accelerate;
 
         private float _horizontal;
-        private float _vertical;
         private float _acceleration;
         private bool _isAccelerating;
         
         private readonly float _speed;
         private readonly float _defaultSpeed = 1.0f;
         private readonly float _accelerateSpeed;
+        private readonly float _maxLeft;
+        private readonly float _maxRight;
 
         #endregion
         
@@ -29,26 +29,21 @@ namespace DefaultNamespace
             PlayerData playerData, Transform playerTransform)
         {
             _horizontalInput = input.horizontal;
-            _verticalInput = input.vertical;
             _accelerate = accelerate;
             _horizontalInput.OnAxisChanged += OnHorizontalAxisChanged;
-            _verticalInput.OnAxisChanged += OnVerticalAxisChanged;
             _accelerate.OnKeyHeld += OnAccelerationKeyPressed;
             _playerData = playerData;
             _speed = playerData.Speed;
             _acceleration = _playerData.Acceleration;
             _accelerateSpeed = _playerData.Acceleration;
             _playerTransform = playerTransform;
+            _maxLeft = playerData.MAXLeft;
+            _maxRight = playerData.MAXRight;
         }
 
         private void OnHorizontalAxisChanged(float value)
         {
             _horizontal = value;
-        }
-
-        private void OnVerticalAxisChanged(float value)
-        {
-            _vertical = value;
         }
 
         private void OnAccelerationKeyPressed(bool isKeyHeld)
@@ -67,14 +62,17 @@ namespace DefaultNamespace
         public void Cleanup()
         {
             _horizontalInput.OnAxisChanged -= OnHorizontalAxisChanged;
-            _verticalInput.OnAxisChanged -= OnVerticalAxisChanged;
         }
 
         private void Move(float deltaTime)
         {
+            var localPosition = _playerTransform.localPosition;
             var speed = deltaTime * _speed;
-            _move = (_playerTransform.right * _horizontal + _playerTransform.up * _vertical).normalized * (speed *  _acceleration);
-            _playerTransform.localPosition += _move;
+            _move = new Vector3(_horizontal * (speed * _acceleration), speed) ;
+
+            localPosition += _move;
+            localPosition.x = Mathf.Clamp(localPosition.x, _maxLeft, _maxRight);
+            _playerTransform.localPosition = localPosition;
         }
     }
 }

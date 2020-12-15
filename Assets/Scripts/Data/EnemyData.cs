@@ -3,7 +3,7 @@
 
 namespace DefaultNamespace
 {
-    [CreateAssetMenu(fileName = "PlayerData", menuName = "Data/Player")]
+    [CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemy")]
     public class EnemyData : ScriptableObject
     {
         #region Fields

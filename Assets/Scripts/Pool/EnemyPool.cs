@@ -53,7 +53,7 @@ namespace DefaultNamespace
             var enemy = enemies.FirstOrDefault(a => !a.Instance.activeSelf);
             if (enemy == null)
             {
-                var laser = _factory.Create(_enemyData.Health);
+                var laser = _factory.Create(_enemyData.Health, _enemyData);
                 for (int i = 0; i < _poolCapacity; i++)
                 {
                     var instantiate = laser;

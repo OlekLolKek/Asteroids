@@ -10,15 +10,17 @@
         <e p="Scripts" t="Include">
           <e p="Controllers" t="Include">
             <e p="Asteroid.cs" t="Include" />
+            <e p="CameraController.cs" t="Include" />
+            <e p="CameraFactory.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
             <e p="EnemyController.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
-            <e p="LookController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
             <e p="ShootController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
+            <e p="CameraData.cs" t="Include" />
             <e p="Data.cs" t="Include" />
             <e p="EnemyData.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
@@ -40,12 +42,12 @@
             <e p="IControllable.cs" t="Include" />
             <e p="IEnemyFactory.cs" t="Include" />
             <e p="IExecutable.cs" t="Include" />
+            <e p="IFactory.cs" t="Include" />
             <e p="IInitializable.cs" t="Include" />
             <e p="IInputChangeAxis.cs" t="Include" />
             <e p="IInputKeyHold.cs" t="Include" />
             <e p="IInputKeyPress.cs" t="Include" />
             <e p="ILateExecutable.cs" t="Include" />
-            <e p="IPlayerFactory.cs" t="Include" />
             <e p="IUnit.cs" t="Include" />
           </e>
           <e p="Managers" t="Include">
@@ -53,6 +55,7 @@
             <e p="NameManager.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
+            <e p="CameraModel.cs" t="Include" />
             <e p="Health.cs" t="Include" />
             <e p="InputModel.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />

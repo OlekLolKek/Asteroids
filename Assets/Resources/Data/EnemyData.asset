@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59450312430046df98ace7e8d7d894ae, type: 3}
-  m_Name: Data
+  m_Script: {fileID: 11500000, guid: 5651d759752e41f3aed55bd5208636e9, type: 3}
+  m_Name: EnemyData
   m_EditorClassIdentifier: 
-  _dataRootPath: Data/
-  _playerDataPath: PlayerData
-  _enemyDataPath: EnemyData
-  _cameraDataPath: CameraData
+  _asteroidSprite: {fileID: 21300000, guid: 264f9fc257019d74a92ea3508776b6f5, type: 3}
+  _health:
+    _max: 10
+    _current: 10

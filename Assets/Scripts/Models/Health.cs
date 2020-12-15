@@ -1,12 +1,28 @@
 ﻿using System;
+using UnityEngine;
+
 
 namespace DefaultNamespace
 {
     [Serializable]
     public sealed class Health
     {
-        public float Max { get; }
-        public float Current { get; private set; }
+        [SerializeField]
+        private float _max;
+        [SerializeField]
+        private float _current;
+        
+        public float Max 
+        { 
+            get => _max;
+            private set => _max = value;
+        }
+
+        public float Current
+        {
+            get => _current; 
+            private set => _current = value;
+        }
 
         public Health(float max, float current)
         {

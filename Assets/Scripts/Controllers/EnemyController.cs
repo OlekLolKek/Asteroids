@@ -50,12 +50,6 @@ namespace DefaultNamespace
             }
         }
 
-        public static EnemyController CreateAsteroidEnemy(Health hp)
-        {
-            var enemy = Factory.Create(hp);
-            return enemy;
-        }
-
         public static EnemyController CreateAsteroidEnemyWithPool(EnemyPool enemyPool, Health hp)
         {
             var enemy = enemyPool.GetEnemy(EnemyTypes.Asteroid);
@@ -66,7 +60,7 @@ namespace DefaultNamespace
             return enemy;
         }
 
-        private void ActivaEnemy(Vector3 position, Quaternion rotation)
+        private void ActivateEnemy(Vector3 position, Quaternion rotation)
         {
             Instance.transform.localPosition = position;
             Instance.transform.localRotation = rotation;
@@ -74,7 +68,7 @@ namespace DefaultNamespace
             Instance.transform.SetParent(null);
         }
 
-        protected void ReturnToPool()
+        private void ReturnToPool()
         {
             Instance.transform.localPosition = Vector3.zero;
             Instance.transform.localRotation = Quaternion.identity;

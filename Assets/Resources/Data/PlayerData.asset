@@ -15,14 +15,15 @@ MonoBehaviour:
   _particlesPrefab: {fileID: 183190, guid: e9a6501da28be2b4986e8ba47c2e017c, type: 3}
   _bulletPrefab: {fileID: 4933975063922895782, guid: a745dd606b94f0e4ea1288097c3c31e1,
     type: 3}
-  _playerSprite: {fileID: 21300000, guid: 38ceccf2cc1310c4ca6fb20a2bc0ee45, type: 3}
-  _barrelPosition: {x: -0.137, y: 1, z: 0}
-  _cameraPosition: {x: 0, y: 1, z: -10}
+  _playerSprite: {fileID: 21300000, guid: e285039a77d84e0448734e12a9731e19, type: 3}
+  _barrelPosition: {x: 0, y: 0.1, z: 0}
+  _spriteScale: 10
   _speed: 10
   _acceleration: 2.5
-  _cameraSize: 5
-  _shootForce: 100
+  _shootForce: 1000
   _bulletLifespan: 10
+  _maxLeft: -12
+  _maxRight: 12
   _playerName: Player
   _barrelName: Barrel
-  _cameraName: Camera
+  _playerLayerID: 9

@@ -2,7 +2,7 @@
 
 namespace DefaultNamespace
 {
-    public class PlayerFactory : IPlayerFactory
+    public class PlayerFactory : IFactory
     {
         private readonly PlayerData _playerData;
         private Transform _transform;
@@ -16,30 +16,25 @@ namespace DefaultNamespace
             _playerData = playerData;
         }
         
-        public void CreatePlayer()
+        public GameObject Create()
         {
             _player = new GameObject(_playerData.PlayerName);
             _transform = _player.transform;
+            var scale = _playerData.SpriteScale;
+            _transform.localScale = new Vector3(scale, scale);
             var spriteRenderer = _player.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = _playerData.PlayerSprite;
             _player.AddComponent<PolygonCollider2D>();
+            _player.layer = _playerData.PlayerLayerID;
             
             var barrel = new GameObject(_playerData.BarrelName);
             _barrelTransform = barrel.transform;
             _barrelTransform.SetParent(_player.transform);
             _barrelTransform.localPosition = _playerData.BarrelPosition;
 
-            var camera = new GameObject(_playerData.CameraName);
-            camera.transform.SetParent(_player.transform);
-            _camera = camera.AddComponent<Camera>();
-            _camera.transform.localPosition = _playerData.CameraPosition;
-            _camera.gameObject.AddComponent<AudioListener>();
-            _camera.orthographic = true;
-            _camera.clearFlags = CameraClearFlags.Color;
-            _camera.backgroundColor = Color.black;
-            _camera.orthographicSize = _playerData.CameraSize;
-
             Object.Instantiate(_playerData.ParticlesPrefab, _player.transform);
+
+            return _player;
         }
 
         public Transform GetTransform()

@@ -2,6 +2,6 @@
 {
     public interface IEnemyFactory
     {
-        EnemyController Create(Health hp);
+        EnemyController Create(Health hp, EnemyData data);
     }
 }
