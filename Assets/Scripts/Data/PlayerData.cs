@@ -15,7 +15,7 @@ namespace DefaultNamespace
         [SerializeField] private float _spriteScale;
         [SerializeField, Range(0, 10)] private float _speed;
         [SerializeField, Range(0, 10)] private float _acceleration;
-        [SerializeField, Range(0, 1000)] private float _shootForce;
+        [SerializeField, Range(0, 10000)] private float _shootForce;
         [SerializeField, Range(0, 100)] private float _bulletLifespan;
         [SerializeField] private float _maxLeft;
         [SerializeField] private float _maxRight;

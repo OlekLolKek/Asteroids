@@ -20,7 +20,7 @@ MonoBehaviour:
   _spriteScale: 10
   _speed: 10
   _acceleration: 2.5
-  _shootForce: 1000
+  _shootForce: 2000
   _bulletLifespan: 10
   _maxLeft: -12
   _maxRight: 12

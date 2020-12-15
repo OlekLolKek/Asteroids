@@ -26,9 +26,10 @@ namespace DefaultNamespace
         private void OnShootButtonPressed(bool b)
         {
             var bullet = Object.Instantiate(_bulletPrefab);
-            bullet.transform.localScale = new Vector3(_scale, _scale);
-            bullet.transform.position = _barrelTransform.position;
-            bullet.AddForce(bullet.transform.up * _shootForce);
+            var transform = bullet.transform;
+            transform.localScale = new Vector3(_scale, _scale);
+            transform.position = _barrelTransform.position;
+            bullet.AddForce(transform.up * _shootForce);
             Object.Destroy(bullet.gameObject, _bulletLifespan);
         }
     }
