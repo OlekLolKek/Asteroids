@@ -16,3 +16,4 @@ MonoBehaviour:
   _health:
     _max: 10
     _current: 10
+  _enemyTimer: 3

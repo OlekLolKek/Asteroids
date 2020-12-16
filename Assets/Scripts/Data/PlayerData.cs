@@ -16,6 +16,7 @@ namespace DefaultNamespace
         [SerializeField, Range(0, 10)] private float _speed;
         [SerializeField, Range(0, 10)] private float _acceleration;
         [SerializeField, Range(0, 10000)] private float _shootForce;
+        [SerializeField, Range(0, 100)] private float _shootCooldown;
         [SerializeField, Range(0, 100)] private float _bulletLifespan;
         [SerializeField] private float _maxLeft;
         [SerializeField] private float _maxRight;
@@ -36,6 +37,7 @@ namespace DefaultNamespace
         public float Speed => _speed;
         public float Acceleration => _acceleration;
         public float ShootForce => _shootForce;
+        public float ShootCooldown => _shootCooldown;
         public float BulletLifespan => _bulletLifespan;
         public string PlayerName => _playerName;
         public string BarrelName => _barrelName;

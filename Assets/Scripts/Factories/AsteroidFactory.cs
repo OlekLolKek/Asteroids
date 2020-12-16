@@ -2,13 +2,12 @@
 
 namespace DefaultNamespace
 {
-    internal sealed class AsteroidFactory : IEnemyFactory
+    public sealed class AsteroidFactory : IEnemyFactory
     {
-        public EnemyController Create(Health hp, EnemyData data)
+        public Enemy Create(Health hp, EnemyData data)
         {
-            var enemy = new Asteroid();
-            enemy.Instance.AddComponent<SpriteRenderer>().sprite = data.AsteroidSprite;
-            enemy.DependencyInjectHealth(data.Health);
+            var enemy = Object.Instantiate(Resources.Load<Asteroid>("Enemy/Asteroid"));
+            enemy.DependencyInjectHealth(hp);
             return enemy;
         }
     }

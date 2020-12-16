@@ -10,6 +10,7 @@ namespace DefaultNamespace
         
         [SerializeField] private Sprite _asteroidSprite;
         [SerializeField] private Health _health;
+        [SerializeField] private float _enemyTimer;
 
         #endregion
 
@@ -18,6 +19,7 @@ namespace DefaultNamespace
         
         public Sprite AsteroidSprite => _asteroidSprite;
         public Health Health => _health;
+        public float EnemyTimer => _enemyTimer;
 
         #endregion
     }

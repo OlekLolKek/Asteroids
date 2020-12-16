@@ -21,15 +21,11 @@ namespace DefaultNamespace
             var inputModel = new InputModel();
             
             _controllers = new Controllers();
-            _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(), inputModel.GetInputShoot(), inputModel.GetInputAccelerate()));
+            _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(), inputModel.GetInputAccelerate()));
             _controllers.Add(new MoveController(inputModel.GetInputKeyboard(), inputModel.GetInputAccelerate(), _data.PlayerData, playerModel.Transform));
-            _controllers.Add(new ShootController(inputModel.GetInputShoot(), _data.PlayerData, playerModel.BarrelTransform));
+            _controllers.Add(new ShootController(_data.PlayerData, playerModel.BarrelTransform));
             _controllers.Add(new CameraController(cameraModel, playerModel, _data.CameraData));
-
-            var enemyPool = new EnemyPool(5, _data.EnemyData, asteroidFactory);
-            var enemy = enemyPool.GetEnemy(EnemyTypes.Asteroid);
-            enemy.Instance.transform.position = Vector3.one;
-            enemy.Instance.SetActive(true);
+            _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, asteroidFactory));
             
             _controllers.Initialize();
         }

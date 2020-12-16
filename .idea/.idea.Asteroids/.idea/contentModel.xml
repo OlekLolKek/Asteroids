@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Asteroids.-61067163.00" t="ExcludeRecursive" />
-    <e p="C:\Users\notdn\AppData\Roaming\JetBrains\Rider2020.2\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Asteroids.-61067163.00" t="ExcludeRecursive" />
+    <e p="C:\Users\notdn\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
     <e p="C:\Users\notdn\OneDrive\Рабочий стол\Asteroids" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Controllers" t="Include">
             <e p="Asteroid.cs" t="Include" />
+            <e p="AsteroidController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CameraFactory.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
-            <e p="EnemyController.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
@@ -53,6 +54,7 @@
           <e p="Managers" t="Include">
             <e p="AxisManager.cs" t="Include" />
             <e p="NameManager.cs" t="Include" />
+            <e p="PathManager.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />
@@ -61,6 +63,7 @@
             <e p="PlayerModel.cs" t="Include" />
           </e>
           <e p="Pool" t="Include">
+            <e p="BulletPool.cs" t="Include" />
             <e p="EnemyPool.cs" t="Include" />
           </e>
           <e p="Test.cs" t="Include" />

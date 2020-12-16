@@ -20,11 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dust Particles/Prefab/Dust Particles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dust Particles/Prefab/Dust Particles.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Models/InputModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,33 +53,23 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/22/af0ecd1d/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/69/a3085dc0/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyTypes.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/Health.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/CameraData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/CameraModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/CameraFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/MoveController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Factories/PlayerFactory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayerModel.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PathManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Models/InputModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
   <component name="ProjectViewState">
@@ -81,7 +88,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -90,7 +97,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -107,7 +114,11 @@
       <workItem from="1607884005349" duration="4474000" />
       <workItem from="1607962454785" duration="7644000" />
       <workItem from="1608050591175" duration="2629000" />
-      <workItem from="1608066556560" duration="4322000" />
+      <workItem from="1608066556560" duration="7368000" />
+      <workItem from="1608136896653" duration="2364000" />
+      <workItem from="1608144081357" duration="15000" />
+      <workItem from="1608144147709" duration="457000" />
+      <workItem from="1608144676325" duration="4305000" />
     </task>
     <servers />
   </component>
