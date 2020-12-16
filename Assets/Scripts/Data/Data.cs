@@ -11,10 +11,12 @@ namespace DefaultNamespace
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _cameraDataPath;
+        [SerializeField] private string _bulletDataPath;
 
         private PlayerData _playerData;
         private EnemyData _enemyData;
         private CameraData _cameraData;
+        private BulletData _bulletData;
         
         
         public PlayerData PlayerData
@@ -53,6 +55,19 @@ namespace DefaultNamespace
                 }
 
                 return _cameraData;
+            }
+        }
+
+        public BulletData BulletData
+        {
+            get
+            {
+                if (_bulletData == null)
+                {
+                    _bulletData = Load<BulletData>(_dataRootPath + _bulletDataPath);
+                }
+
+                return _bulletData;
             }
         }
 

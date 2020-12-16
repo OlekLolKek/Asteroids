@@ -53,11 +53,10 @@ namespace DefaultNamespace
             var enemy = enemies.FirstOrDefault(a => !a.gameObject.activeSelf);
             if (enemy == null)
             {
-                var laser = Resources.Load<Asteroid>(PathManager.ASTEROID_PATH);
+                var prefab = Resources.Load<Asteroid>(PathManager.ENEMY_ASTEROID_PATH);
                 for (int i = 0; i < _poolCapacity; i++)
                 {
-                    Debug.Log(laser);
-                    var instantiate = Object.Instantiate(laser);
+                    var instantiate = Object.Instantiate(prefab);
                     ReturnToPool(instantiate.transform);
                     enemies.Add(instantiate);
                 }
@@ -69,7 +68,7 @@ namespace DefaultNamespace
             return enemy;
         }
 
-        private void ReturnToPool(Transform transform)
+        public void ReturnToPool(Transform transform)
         {
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
@@ -77,7 +76,7 @@ namespace DefaultNamespace
             transform.SetParent(_poolRoot);
         }
 
-        public void RemovePool()
+        public void DeletePool()
         {
             Object.Destroy(_poolRoot.gameObject);
         }

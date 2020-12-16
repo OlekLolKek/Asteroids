@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UniRx;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class ShootController : IExecutable
     {
-        private readonly Rigidbody2D _bulletPrefab;
         private readonly Transform _barrelTransform;
+        private readonly BulletPool _bulletPool;
         private readonly float _shootForce;
         private readonly float _bulletLifespan;
         private readonly float _scale;
@@ -13,27 +15,16 @@ namespace DefaultNamespace
         private float _timer;
 
         
-        public ShootController(PlayerData playerData, Transform barrelTransform)
+        public ShootController(BulletData bulletData, Transform barrelTransform, LaserFactory laserFactory)
         {
+            _bulletPool = new BulletPool(12, bulletData, laserFactory);
             _barrelTransform = barrelTransform;
-            Debug.Log(barrelTransform.gameObject.name);
-            _bulletPrefab = playerData.BulletPrefab;
-            _shootForce = playerData.ShootForce;
-            _bulletLifespan = playerData.BulletLifespan;
-            _scale = playerData.SpriteScale;
-            _shootCooldown = playerData.ShootCooldown;
+            _shootForce = bulletData.ShootForce;
+            _bulletLifespan = bulletData.BulletLifespan;
+            _scale = bulletData.SpriteScale;
+            _shootCooldown = bulletData.ShootCooldown;
         }
-
-        private void OnShootButtonPressed(bool b)
-        {
-            var bullet = Object.Instantiate(_bulletPrefab);
-            var transform = bullet.transform;
-            transform.localScale = new Vector3(_scale, _scale);
-            transform.position = _barrelTransform.position;
-            bullet.AddForce(transform.up * _shootForce);
-            Object.Destroy(bullet.gameObject, _bulletLifespan);
-            
-        }
+        
 
         public void Execute(float deltaTime)
         {
@@ -46,18 +37,21 @@ namespace DefaultNamespace
             if (_timer >= _shootCooldown)
             {
                 _timer = 0.0f;
-                var bullet = Object.Instantiate(_bulletPrefab);
+                var bullet = _bulletPool.GetBullet(BulletTypes.Laser);
                 var transform = bullet.transform;
+                var rigidbody = bullet.GetComponent<Rigidbody2D>();
+                bullet.gameObject.SetActive(true);
                 transform.localScale = new Vector3(_scale, _scale);
                 transform.position = _barrelTransform.position;
-                bullet.AddForce(transform.up * _shootForce);
-                Object.Destroy(bullet.gameObject, _bulletLifespan);
-                // var enemy = _pool.GetEnemy(EnemyTypes.Asteroid);
-                // var position = _playerTransform.position;
-                // //TODO: Заменить число на поле
-                // enemy.transform.position = new Vector3(position.x, position.y + 15.0f);
-                // enemy.gameObject.SetActive(true);
+                rigidbody.AddForce(transform.up * _shootForce);
+                var coroutine = ReturnToPool(transform, _bulletLifespan).ToObservable().Subscribe();
             }
+        }
+
+        private IEnumerator ReturnToPool(Transform bullet, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            _bulletPool.ReturnToPool(bullet);
         }
     }
 }

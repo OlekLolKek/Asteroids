@@ -21,8 +21,8 @@ MonoBehaviour:
   _speed: 10
   _acceleration: 2.5
   _shootForce: 2000
-  _shootCooldown: 0.2
-  _bulletLifespan: 10
+  _shootCooldown: 0.15
+  _bulletLifespan: 5
   _maxLeft: -12
   _maxRight: 12
   _playerName: Player

@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UniRx;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
@@ -12,15 +15,17 @@ namespace DefaultNamespace
         public AsteroidController(EnemyData enemyData, PlayerModel playerModel, AsteroidFactory asteroidFactory)
         {
             //TODO: Заменить число на поле
-            _pool = new EnemyPool(5, enemyData, asteroidFactory);
-            var enemy = _pool.GetEnemy(EnemyTypes.Asteroid);
-            enemy.transform.position = Vector3.one;
-            enemy.gameObject.SetActive(true);
+            _pool = new EnemyPool(2, enemyData, asteroidFactory);
             _enemyTimer = enemyData.EnemyTimer;
             _playerTransform = playerModel.Transform;
         }
     
         public void Execute(float deltaTime)
+        {
+            SpawnAsteroids(deltaTime);
+        }
+
+        private void SpawnAsteroids(float deltaTime)
         {
             _timer += deltaTime;
             if (_timer >= _enemyTimer)
@@ -31,7 +36,14 @@ namespace DefaultNamespace
                 //TODO: Заменить число на поле
                 enemy.transform.position = new Vector3(position.x, position.y + 15.0f);
                 enemy.gameObject.SetActive(true);
+                var coroutine = ReturnToPool(enemy.transform, _enemyTimer).ToObservable().Subscribe();
             }
+        }
+        
+        private IEnumerator ReturnToPool(Transform asteroid, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            _pool.ReturnToPool(asteroid);
         }
     }
 }

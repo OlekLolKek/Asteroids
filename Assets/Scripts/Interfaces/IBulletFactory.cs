@@ -1,4 +1,7 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿namespace DefaultNamespace
 {
-  public interface $INTERFACE$ {$END$}
+    public interface IBulletFactory
+    {
+        Bullet Create(EnemyData data);
+    }
 }

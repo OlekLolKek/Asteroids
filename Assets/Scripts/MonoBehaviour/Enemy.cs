@@ -38,7 +38,7 @@ namespace DefaultNamespace
 
         public static Asteroid CreateAsteroidEnemy(Health hp)
         {
-            var enemy = Instantiate(Resources.Load<Asteroid>("Enemy/Asteroid"));
+            var enemy = Instantiate(Resources.Load<Asteroid>(PathManager.ENEMY_ASTEROID_PATH));
             enemy.Health = hp;
             return enemy;
         }

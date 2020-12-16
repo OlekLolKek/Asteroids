@@ -1,4 +1,7 @@
-﻿$HEADER$namespace $NAMESPACE$
+﻿namespace DefaultNamespace
 {
-  public enum $ENUM$ {$END$}
+    public enum BulletTypes
+    {
+        Laser = 0,
+    }
 }

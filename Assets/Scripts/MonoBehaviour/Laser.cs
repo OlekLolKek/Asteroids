@@ -1,7 +1,6 @@
 ﻿namespace DefaultNamespace
 {
-    public class Laser
+    public class Laser : Bullet
     {
-        
     }
 }

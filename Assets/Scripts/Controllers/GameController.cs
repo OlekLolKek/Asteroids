@@ -14,6 +14,7 @@ namespace DefaultNamespace
             var playerFactory = new PlayerFactory(_data.PlayerData);
             var asteroidFactory = new AsteroidFactory();
             var cameraFactory = new CameraFactory(_data.CameraData);
+            var laserFactory = new LaserFactory();
 
 
             var playerModel = new PlayerModel(playerFactory);
@@ -23,7 +24,7 @@ namespace DefaultNamespace
             _controllers = new Controllers();
             _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(), inputModel.GetInputAccelerate()));
             _controllers.Add(new MoveController(inputModel.GetInputKeyboard(), inputModel.GetInputAccelerate(), _data.PlayerData, playerModel.Transform));
-            _controllers.Add(new ShootController(_data.PlayerData, playerModel.BarrelTransform));
+            _controllers.Add(new ShootController(_data.BulletData, playerModel.BarrelTransform, laserFactory));
             _controllers.Add(new CameraController(cameraModel, playerModel, _data.CameraData));
             _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, asteroidFactory));
             

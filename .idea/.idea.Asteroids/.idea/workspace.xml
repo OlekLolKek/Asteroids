@@ -20,21 +20,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/riderModule.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Enemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Enemy/Asteroid.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Enemy/Asteroid.prefab.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BulletData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Data/BulletData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/BulletTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/BulletTypes.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBulletFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBulletFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PathManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/PathManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Bullet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Bullet.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/Data.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" afterDir="false" />
@@ -58,17 +84,29 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/EnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Asteroid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PathManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Models/InputModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IPoolProduct.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Enums/BulletTypes.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/PathManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBulletFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/Data.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Data/BulletData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -80,6 +118,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="discord-project" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -118,7 +157,7 @@
       <workItem from="1608136896653" duration="2364000" />
       <workItem from="1608144081357" duration="15000" />
       <workItem from="1608144147709" duration="457000" />
-      <workItem from="1608144676325" duration="4305000" />
+      <workItem from="1608144676325" duration="11912000" />
     </task>
     <servers />
   </component>
@@ -141,15 +180,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="776" y="220" key="RiderGenerateDialog" timestamp="1607964485897">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="776" y="220" key="RiderGenerateDialog/0.0.1920.1040/-1600.-181.1600.860@0.0.1920.1040" timestamp="1607964485897" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1607965747849">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040/-1600.-181.1600.860@0.0.1920.1040" timestamp="1607965747849" />
   </component>
 </project>
