@@ -14,6 +14,7 @@ namespace DefaultNamespace
         private readonly int _poolCapacity;
         private readonly BulletData _bulletData;
         private readonly Transform _poolRoot;
+        private int _id = 0;
 
         public BulletPool(int poolCapacity, BulletData bulletData, IBulletFactory factory)
         {
@@ -56,6 +57,7 @@ namespace DefaultNamespace
                 for (int i = 0; i < _poolCapacity; i++)
                 {
                     var instantiate = Object.Instantiate(prefab);
+                    instantiate.ID = _id++;
                     ReturnToPool(instantiate.transform);
                     bullets.Add(instantiate);
                 }

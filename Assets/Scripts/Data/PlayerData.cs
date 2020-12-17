@@ -23,6 +23,8 @@ namespace DefaultNamespace
         [SerializeField] private string _playerName;
         [SerializeField] private string _barrelName;
         [SerializeField] private int _playerLayerID;
+        [SerializeField] private AudioClip _shootSFX;
+        [SerializeField, Range(0.0f, 1.0f)] private float _shootVolume;
 
         #endregion
 
@@ -44,6 +46,8 @@ namespace DefaultNamespace
         public float MAXLeft => _maxLeft;
         public float MAXRight => _maxRight;
         public int PlayerLayerID => _playerLayerID;
+        public AudioClip ShootSfx => _shootSFX;
+        public float ShootVolume => _shootVolume;
 
         #endregion
     }

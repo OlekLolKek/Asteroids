@@ -7,8 +7,8 @@ namespace DefaultNamespace
         private readonly PlayerData _playerData;
         private Transform _transform;
         private Transform _barrelTransform;
-        private Camera _camera;
         private GameObject _player;
+        private AudioSource _audioSource;
 
 
         public PlayerFactory(PlayerData playerData)
@@ -22,8 +22,16 @@ namespace DefaultNamespace
             _transform = _player.transform;
             var scale = _playerData.SpriteScale;
             _transform.localScale = new Vector3(scale, scale);
+            
             var spriteRenderer = _player.AddComponent<SpriteRenderer>();
             spriteRenderer.sprite = _playerData.PlayerSprite;
+            
+            _audioSource = _player.AddComponent<AudioSource>();
+            _audioSource.playOnAwake = false;
+            _audioSource.loop = false;
+            _audioSource.clip = _playerData.ShootSfx;
+            _audioSource.volume = _playerData.ShootVolume;
+                
             _player.AddComponent<PolygonCollider2D>();
             _player.layer = _playerData.PlayerLayerID;
             
@@ -47,9 +55,9 @@ namespace DefaultNamespace
             return _barrelTransform;
         }
 
-        public Camera GetCamera()
+        public AudioSource GetAudioSource()
         {
-            return _camera;
+            return _audioSource;
         }
     }
 }

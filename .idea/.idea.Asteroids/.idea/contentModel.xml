@@ -337,6 +337,7 @@
             <e p="AxisManager.cs" t="Include" />
             <e p="NameManager.cs" t="Include" />
             <e p="PathManager.cs" t="Include" />
+            <e p="TagManager.cs" t="Include" />
           </e>
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />

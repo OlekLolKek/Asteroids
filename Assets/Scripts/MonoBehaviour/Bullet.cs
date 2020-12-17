@@ -1,12 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 namespace DefaultNamespace
 {
     public class Bullet : MonoBehaviour
     {
+        public event Action<Bullet> OnBulletHit = delegate {  };
         public static IBulletFactory Factory;
         private Transform _poolRoot;
+
+        public int ID { get; set; }
 
         public Transform PoolRoot
         {
@@ -19,6 +23,14 @@ namespace DefaultNamespace
                 }
 
                 return _poolRoot;
+            }
+        }
+        
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.collider.CompareTag(TagManager.ENEMY_TAG))
+            {
+                OnBulletHit.Invoke(this);
             }
         }
 

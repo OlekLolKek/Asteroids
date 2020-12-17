@@ -22,9 +22,11 @@ MonoBehaviour:
   _acceleration: 2.5
   _shootForce: 2000
   _shootCooldown: 0.15
-  _bulletLifespan: 5
+  _bulletLifespan: 3
   _maxLeft: -12
   _maxRight: 12
   _playerName: Player
   _barrelName: Barrel
   _playerLayerID: 9
+  _shootSFX: {fileID: 8300000, guid: 3d72bccc6b6868346a03f8bd450ef5ca, type: 3}
+  _shootVolume: 0.25
