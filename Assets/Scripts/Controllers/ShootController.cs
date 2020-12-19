@@ -12,7 +12,7 @@ namespace DefaultNamespace
         
         #region Fields
 
-        private readonly Dictionary<int, IDisposable> _coroutines = new Dictionary<int, IDisposable>();
+        private readonly List<IDisposable> _coroutines = new List<IDisposable>();
         private readonly List<Bullet> _bullets = new List<Bullet>();
         private readonly Transform _barrelTransform;
         private readonly BulletPool _bulletPool;
@@ -31,13 +31,17 @@ namespace DefaultNamespace
         public ShootController(BulletData bulletData, Transform barrelTransform, 
             LaserFactory laserFactory, AudioSource audioSource)
         {
-            _bulletPool = new BulletPool(12, bulletData, laserFactory);
+            var ratio = bulletData.BulletLifespan / bulletData.ShootCooldown;
+            var poolSize = (int) Math.Ceiling(ratio);
+            _bulletPool = new BulletPool(poolSize, bulletData, laserFactory);
+            
             _barrelTransform = barrelTransform;
-            _shootForce = bulletData.ShootForce;
-            _bulletLifespan = bulletData.BulletLifespan;
-            _scale = bulletData.SpriteScale;
-            _shootCooldown = bulletData.ShootCooldown;
             _audioSource = audioSource;
+            
+            _bulletLifespan = bulletData.BulletLifespan;
+            _shootCooldown = bulletData.ShootCooldown;
+            _shootForce = bulletData.ShootForce;
+            _scale = bulletData.SpriteScale;
         }
 
         public void Execute(float deltaTime)
@@ -53,20 +57,12 @@ namespace DefaultNamespace
                 _timer = 0.0f;
                 var bullet = _bulletPool.GetBullet(BulletTypes.Laser);
                 
-                if (!_coroutines.ContainsKey(bullet.ID))
-                {
-                    var coroutine = _coroutine = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
-                    _coroutines.Add(bullet.ID, coroutine);
-                    _bullets.Add(bullet);
-                }
-                else
-                {
-                    _coroutines[bullet.ID] = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
-                }
+                ManagePool(bullet);
                 
                 var transform = bullet.transform;
                 var rigidbody = bullet.GetComponent<Rigidbody2D>();
                 bullet.gameObject.SetActive(true);
+                
                 transform.localScale = new Vector3(_scale, _scale);
                 transform.position = _barrelTransform.position;
                 rigidbody.AddForce(transform.up * _shootForce);
@@ -75,15 +71,30 @@ namespace DefaultNamespace
             }
         }
 
-        private void OnBulletHit(Bullet bullet)
+        private void ManagePool(Bullet bullet)
         {
+            if (!_bullets.Contains(bullet))
+            {
+                _bullets.Add(bullet);
+                var coroutine = _coroutine = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
+                _coroutines.Add(coroutine);
+            }
+            else
+            {
+                _coroutines[bullet.ID] = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
+            }
+        }
+
+        private void OnBulletHit(int id)
+        {
+            var bullet = _bullets[id];
             bullet.OnBulletHit -= OnBulletHit;
             if (bullet.gameObject.activeSelf)
             {
                 _bulletPool.ReturnToPool(bullet.transform);
             }
-                
-            _coroutine.Dispose();
+            
+            _coroutines[id].Dispose();
         }
 
         private IEnumerator ReturnToPool(int id, float delay)
@@ -92,7 +103,9 @@ namespace DefaultNamespace
             
             _bullets[id].OnBulletHit -= OnBulletHit;
             if (_bullets[id].gameObject.activeSelf)
+            {
                 _bulletPool.ReturnToPool(_bullets[id].transform);
+            }
         }
     }
 }

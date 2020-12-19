@@ -16,6 +16,6 @@ MonoBehaviour:
     type: 3}
   _bulletSprite: {fileID: 21300000, guid: 48991a0ce92fad1488d599c0731541fa, type: 3}
   _shootForce: 2000
-  _bulletLifespan: 5
+  _bulletLifespan: 1
   _spriteScale: 10
   _shootCooldown: 0.15

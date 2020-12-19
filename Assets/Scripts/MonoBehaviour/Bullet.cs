@@ -6,7 +6,7 @@ namespace DefaultNamespace
 {
     public class Bullet : MonoBehaviour
     {
-        public event Action<Bullet> OnBulletHit = delegate {  };
+        public event Action<int> OnBulletHit = delegate {  };
         public static IBulletFactory Factory;
         private Transform _poolRoot;
 
@@ -30,7 +30,7 @@ namespace DefaultNamespace
         {
             if (other.collider.CompareTag(TagManager.ENEMY_TAG))
             {
-                OnBulletHit.Invoke(this);
+                OnBulletHit.Invoke(ID);
             }
         }
 
