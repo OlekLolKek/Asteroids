@@ -9,17 +9,18 @@ namespace DefaultNamespace
 {
     public class EnemyPool
     {
-        private readonly Dictionary<EnemyTypes, HashSet<Enemy>> _enemyPool;
-        private IEnemyFactory _factory;
-        private readonly int _poolCapacity;
+        private readonly Dictionary<EnemyTypes, HashSet<BaseEnemyController>> _enemyPool;
+        private readonly IEnemyFactory _factory;
         private readonly EnemyData _enemyData;
         private readonly Transform _poolRoot;
+        private readonly int _poolCapacity;
+        private int _id = 0;
 
 
         public EnemyPool(int poolCapacity, EnemyData enemyData, IEnemyFactory factory)
         {
             _factory = factory;
-            _enemyPool = new Dictionary<EnemyTypes, HashSet<Enemy>>();
+            _enemyPool = new Dictionary<EnemyTypes, HashSet<BaseEnemyController>>();
             _poolCapacity = poolCapacity;
             _enemyData = enemyData;
             if (!_poolRoot)
@@ -28,9 +29,9 @@ namespace DefaultNamespace
             }
         }
 
-        public Enemy GetEnemy(EnemyTypes type)
+        public BaseEnemyController GetEnemy(EnemyTypes type)
         {
-            Enemy result;
+            BaseEnemyController result;
             switch (type)
             {
                 case EnemyTypes.Asteroid:
@@ -43,42 +44,40 @@ namespace DefaultNamespace
             return result;
         }
 
-        private HashSet<Enemy> GetListEnemies(EnemyTypes type)
+        private HashSet<BaseEnemyController> GetListEnemies(EnemyTypes type)
         {
             if (!_enemyPool.ContainsKey(type))
             {
-                _enemyPool[type] = new HashSet<Enemy>();
+                _enemyPool[type] = new HashSet<BaseEnemyController>();
             }
 
             return _enemyPool[type];
         }
 
-        private Enemy GetAsteroid(HashSet<Enemy> enemies)
+        private BaseEnemyController GetAsteroid(HashSet<BaseEnemyController> enemies)
         {
-            var enemy = enemies.FirstOrDefault(a => !a.gameObject.activeSelf);
+            var enemy = enemies.FirstOrDefault(a => !a.IsActive);
+            
             if (enemy == null)
             {
-                var prefab = Resources.Load<Asteroid>(PathManager.ENEMY_ASTEROID_PATH);
                 for (int i = 0; i < _poolCapacity; i++)
                 {
-                    var instantiate = Object.Instantiate(prefab);
-                    ReturnToPool(instantiate.transform);
-                    enemies.Add(instantiate);
+                    var newEnemy = new BaseEnemyController(_enemyData, _factory);
+                    newEnemy.ID = _id++;
+                    ReturnToPool(newEnemy);
+                    enemies.Add(newEnemy);
                 }
-
+                
                 GetAsteroid(enemies);
             }
 
-            enemy = enemies.FirstOrDefault(a => !a.gameObject.activeSelf);
+            enemy = enemies.FirstOrDefault(a => !a.IsActive);
             return enemy;
         }
 
-        public void ReturnToPool(Transform transform)
+        public void ReturnToPool(BaseEnemyController enemy)
         {
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
-            transform.gameObject.SetActive(false);
-            transform.SetParent(_poolRoot);
+            enemy.ReturnToPool(_poolRoot);
         }
 
         public void DeletePool()

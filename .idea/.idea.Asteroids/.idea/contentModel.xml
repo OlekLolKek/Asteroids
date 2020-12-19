@@ -291,6 +291,7 @@
           <e p="Controllers" t="Include">
             <e p="AsteroidController.cs" t="Include" />
             <e p="BaseBulletController.cs" t="Include" />
+            <e p="BaseEnemyController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
             <e p="CameraFactory.cs" t="Include" />
             <e p="Controllers.cs" t="Include" />
@@ -349,7 +350,7 @@
           <e p="MonoBehaviour" t="Include">
             <e p="Asteroid.cs" t="Include" />
             <e p="BulletCollision.cs" t="Include" />
-            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyCollision.cs" t="Include" />
             <e p="Laser.cs" t="Include" />
           </e>
           <e p="Pool" t="Include">

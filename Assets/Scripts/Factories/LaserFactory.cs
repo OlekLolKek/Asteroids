@@ -6,7 +6,6 @@ namespace DefaultNamespace
     {
         public GameObject Create(BulletData data)
         {
-            //var bullet = Object.Instantiate(Resources.Load<Laser>("Bullet/Laser"));
             var bullet = new GameObject(NameManager.LASER);
 
             bullet.AddComponent<SpriteRenderer>().sprite = data.BulletSprite;
@@ -21,6 +20,8 @@ namespace DefaultNamespace
             bullet.AddComponent<BulletCollision>();
 
             bullet.tag = TagManager.BULLET_TAG;
+
+            bullet.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
             
             return bullet;
         }

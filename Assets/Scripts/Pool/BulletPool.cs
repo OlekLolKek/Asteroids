@@ -11,9 +11,9 @@ namespace DefaultNamespace
     {
         private readonly Dictionary<BulletTypes, HashSet<BaseBulletController>> _bulletPool;
         private readonly IBulletFactory _factory;
-        private readonly int _poolCapacity;
         private readonly BulletData _bulletData;
         private readonly Transform _poolRoot;
+        private readonly int _poolCapacity;
         private int _id = 0;
 
         public BulletPool(int poolCapacity, BulletData bulletData, IBulletFactory factory)
@@ -59,7 +59,6 @@ namespace DefaultNamespace
             
             if (bullet == null)
             {
-                //var prefab = Resources.Load<BaseBulletController>(PathManager.BULLET_LASER_PATH);
                 for (int i = 0; i < _poolCapacity; i++)
                 {
                     var newBullet = new BaseBulletController(_bulletData, _factory);
@@ -78,11 +77,6 @@ namespace DefaultNamespace
         public void ReturnToPool(BaseBulletController bullet)
         {
             bullet.ReturnToPool(_poolRoot);
-
-            // bullet.localPosition = Vector3.zero;
-            // bullet.localRotation = Quaternion.identity;
-            // bullet.gameObject.SetActive(false);
-            // bullet.SetParent(_poolRoot);
         }
 
         public void DeletePool()

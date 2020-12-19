@@ -81,7 +81,6 @@ namespace DefaultNamespace
             }
             
             _coroutines[id].Dispose();
-            Debug.Log(bullet.IsActive);
         }
 
         private IEnumerator ReturnToPool(int id, float delay)

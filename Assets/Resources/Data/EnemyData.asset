@@ -16,5 +16,10 @@ MonoBehaviour:
   _health:
     _max: 10
     _current: 10
+  _spriteScale: 0
   _enemyTimer: 5
+  _minXPosition: -12
+  _maxXPosition: 12
+  _ySpawnOffset: 15
+  _colliderRadius: 0.3545
   _asteroidPoolSize: 3

@@ -1,7 +1,9 @@
-﻿namespace DefaultNamespace
+﻿using UnityEngine;
+
+namespace DefaultNamespace
 {
     public interface IEnemyFactory
     {
-        Enemy Create(Health hp, EnemyData data);
+        GameObject Create(EnemyData data);
     }
 }

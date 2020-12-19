@@ -8,7 +8,6 @@ namespace DefaultNamespace
     {
         public event Action<int> OnBulletHit = delegate {  };
         
-        private IBulletFactory _factory;
         private Transform _barrelTransform;
         private AudioSource _audioSource;
 
@@ -16,7 +15,6 @@ namespace DefaultNamespace
         private readonly GameObject _instance;
         
         private readonly float _shootForce;
-        private readonly float _scale;
 
 
         public bool IsActive 
@@ -28,8 +26,7 @@ namespace DefaultNamespace
 
         public BaseBulletController(BulletData bulletData, IBulletFactory factory)
         {
-            _factory = factory;
-            _instance = _factory.Create(bulletData);
+            _instance = factory.Create(bulletData);
             
             var collision = _instance.GetComponent<BulletCollision>();
             collision.OnBulletHit += BulletHit;
@@ -37,7 +34,6 @@ namespace DefaultNamespace
             _rigidbody = _instance.GetComponent<Rigidbody2D>();
 
             _shootForce = bulletData.ShootForce;
-            _scale = bulletData.SpriteScale;
         }
 
         public BaseBulletController InjectBarrelTransform(Transform barrel)
@@ -55,7 +51,6 @@ namespace DefaultNamespace
         public void Shoot()
         {
             IsActive = true;
-            _instance.transform.localScale = new Vector3(_scale, _scale);
             _instance.transform.position = _barrelTransform.position;
             _rigidbody.AddForce(_instance.transform.up * _shootForce);
             _audioSource.Play();
@@ -63,10 +58,10 @@ namespace DefaultNamespace
 
         public void ReturnToPool(Transform poolRoot)
         {
+            _instance.transform.SetParent(poolRoot);
             _instance.transform.localPosition = Vector3.zero;
             _instance.transform.localRotation = Quaternion.identity;
             IsActive = false;
-            _instance.transform.SetParent(poolRoot);
         }
 
         private void BulletHit()
