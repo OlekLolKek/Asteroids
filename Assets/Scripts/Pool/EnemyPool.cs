@@ -45,7 +45,12 @@ namespace DefaultNamespace
 
         private HashSet<Enemy> GetListEnemies(EnemyTypes type)
         {
-            return _enemyPool.ContainsKey(type) ? _enemyPool[type] : _enemyPool[type] = new HashSet<Enemy>();
+            if (!_enemyPool.ContainsKey(type))
+            {
+                _enemyPool[type] = new HashSet<Enemy>();
+            }
+
+            return _enemyPool[type];
         }
 
         private Enemy GetAsteroid(HashSet<Enemy> enemies)

@@ -1,7 +1,9 @@
-﻿namespace DefaultNamespace
+﻿using UnityEngine;
+
+namespace DefaultNamespace
 {
     public interface IBulletFactory
     {
-        Bullet Create(EnemyData data);
+        GameObject Create(BulletData data);
     }
 }

@@ -1,6 +1,10 @@
 ﻿namespace DefaultNamespace
 {
-    public class Laser : Bullet
+    public class Laser : BaseBulletController
     {
+        public Laser(BulletData bulletData, IBulletFactory factory) 
+            : base(bulletData, factory)
+        {
+        }
     }
 }
