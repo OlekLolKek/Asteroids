@@ -16,7 +16,7 @@ MonoBehaviour:
   _health:
     _max: 10
     _current: 10
-  _spriteScale: 0
+  _spriteScale: 2
   _enemyTimer: 5
   _minXPosition: -12
   _maxXPosition: 12

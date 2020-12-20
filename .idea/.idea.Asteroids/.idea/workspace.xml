@@ -20,27 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/EnemyCollision.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/EnemyCollision.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/IService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/IService.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/Service.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/Service.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocator.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Bullet.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemy/Asteroid.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemy/Asteroid.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseBulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseBulletController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseEnemyController.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemy.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +90,12 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseEnemyController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/IService.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Service.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocatorMonoBehaviour.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -149,6 +152,8 @@
       <workItem from="1608330313173" duration="5502000" />
       <workItem from="1608390464036" duration="7636000" />
       <workItem from="1608399493088" duration="6478000" />
+      <workItem from="1608475166508" duration="1779000" />
+      <workItem from="1608476967836" duration="2099000" />
     </task>
     <servers />
   </component>
