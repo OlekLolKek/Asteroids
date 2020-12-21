@@ -348,10 +348,8 @@
             <e p="PlayerModel.cs" t="Include" />
           </e>
           <e p="MonoBehaviour" t="Include">
-            <e p="Asteroid.cs" t="Include" />
             <e p="BulletCollision.cs" t="Include" />
             <e p="EnemyCollision.cs" t="Include" />
-            <e p="Laser.cs" t="Include" />
           </e>
           <e p="Pool" t="Include">
             <e p="BulletPool.cs" t="Include" />

@@ -20,24 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/IService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/IService.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/Service.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/Service.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocator.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Enemy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,6 +141,7 @@
       <workItem from="1608399493088" duration="6478000" />
       <workItem from="1608475166508" duration="1779000" />
       <workItem from="1608476967836" duration="2099000" />
+      <workItem from="1608562863682" duration="756000" />
     </task>
     <servers />
   </component>
