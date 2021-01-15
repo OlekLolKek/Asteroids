@@ -16,15 +16,15 @@ MonoBehaviour:
   _bulletPrefab: {fileID: 4933975063922895782, guid: a745dd606b94f0e4ea1288097c3c31e1,
     type: 3}
   _playerSprite: {fileID: 21300000, guid: e285039a77d84e0448734e12a9731e19, type: 3}
-  _barrelPosition: {x: 0, y: 0.1, z: 0}
-  _spriteScale: 10
+  _barrelPosition: {x: 0, y: 0.7, z: 0}
+  _spriteScale: 1
   _speed: 10
   _acceleration: 2.5
   _shootForce: 2000
   _shootCooldown: 0.15
   _bulletLifespan: 3
-  _maxLeft: -12
-  _maxRight: 12
+  _maxLeft: -9
+  _maxRight: 9
   _playerName: Player
   _barrelName: Barrel
   _playerLayerID: 9

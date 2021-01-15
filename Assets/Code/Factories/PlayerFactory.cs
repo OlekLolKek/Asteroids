@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
+
 namespace DefaultNamespace
 {
-    public class PlayerFactory : IFactory
+    public sealed class PlayerFactory : IFactory
     {
         private readonly PlayerData _playerData;
         private Transform _transform;
@@ -39,9 +40,7 @@ namespace DefaultNamespace
             _barrelTransform = barrel.transform;
             _barrelTransform.SetParent(_player.transform);
             _barrelTransform.localPosition = _playerData.BarrelPosition;
-
-            Object.Instantiate(_playerData.ParticlesPrefab, _player.transform);
-
+            
             return _player;
         }
 

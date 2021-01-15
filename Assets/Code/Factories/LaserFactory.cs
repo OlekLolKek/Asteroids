@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
+
 namespace DefaultNamespace
 {
-    public class LaserFactory : IBulletFactory
+    public sealed class LaserFactory : IBulletFactory
     {
         public GameObject Create(BulletData data)
         {

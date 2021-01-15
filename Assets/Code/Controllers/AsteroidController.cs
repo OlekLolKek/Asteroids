@@ -73,7 +73,7 @@ namespace DefaultNamespace
                 _pool.ReturnToPool(asteroid);
             }
                 
-            _coroutine.Dispose();
+            _coroutines[id].Dispose();
         }
         
         private IEnumerator ReturnToPool(int id, float delay)
