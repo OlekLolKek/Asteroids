@@ -12,21 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a44e1e2aba5f4815b92591a2a2650db6, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  _particlesPrefab: {fileID: 183190, guid: e9a6501da28be2b4986e8ba47c2e017c, type: 3}
-  _bulletPrefab: {fileID: 4933975063922895782, guid: a745dd606b94f0e4ea1288097c3c31e1,
-    type: 3}
-  _playerSprite: {fileID: 21300000, guid: e285039a77d84e0448734e12a9731e19, type: 3}
-  _barrelPosition: {x: 0, y: 0.7, z: 0}
-  _spriteScale: 1
-  _speed: 10
-  _acceleration: 2.5
-  _shootForce: 2000
-  _shootCooldown: 0.15
-  _bulletLifespan: 3
+  _prefab: {fileID: 909627627456130434, guid: 8953be33a5d4b4c4788076e4d5ae2656, type: 3}
+  _speed: 7.5
   _maxLeft: -9
   _maxRight: 9
-  _playerName: Player
-  _barrelName: Barrel
-  _playerLayerID: 9
-  _shootSFX: {fileID: 8300000, guid: 3d72bccc6b6868346a03f8bd450ef5ca, type: 3}
+  _shootSfx: {fileID: 8300000, guid: 3d72bccc6b6868346a03f8bd450ef5ca, type: 3}
   _shootVolume: 0.25

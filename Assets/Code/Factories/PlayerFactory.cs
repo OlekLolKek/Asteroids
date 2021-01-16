@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using View;
 
 
 namespace DefaultNamespace
@@ -19,28 +20,16 @@ namespace DefaultNamespace
         
         public GameObject Create()
         {
-            _player = new GameObject(_playerData.PlayerName);
+            _player = Object.Instantiate(_playerData.Prefab.gameObject);
             _transform = _player.transform;
-            var scale = _playerData.SpriteScale;
-            _transform.localScale = new Vector3(scale, scale);
-            
-            var spriteRenderer = _player.AddComponent<SpriteRenderer>();
-            spriteRenderer.sprite = _playerData.PlayerSprite;
-            
-            _audioSource = _player.AddComponent<AudioSource>();
-            _audioSource.playOnAwake = false;
-            _audioSource.loop = false;
+
+            _audioSource = _player.GetComponent<AudioSource>();
             _audioSource.clip = _playerData.ShootSfx;
             _audioSource.volume = _playerData.ShootVolume;
-                
-            _player.AddComponent<PolygonCollider2D>();
-            _player.layer = _playerData.PlayerLayerID;
-            
-            var barrel = new GameObject(_playerData.BarrelName);
-            _barrelTransform = barrel.transform;
-            _barrelTransform.SetParent(_player.transform);
-            _barrelTransform.localPosition = _playerData.BarrelPosition;
-            
+
+            var playerView = _player.GetComponent<PlayerView>();
+            _barrelTransform = playerView.Barrel.transform;
+
             return _player;
         }
 

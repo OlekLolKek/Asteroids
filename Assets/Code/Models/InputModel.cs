@@ -1,6 +1,6 @@
 ﻿namespace DefaultNamespace
 {
-    internal class InputModel
+    public class InputModel
     {
         #region Fields
 

@@ -8,6 +8,10 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
+          <e p="ChainOfResponsibility" t="Include">
+            <e p="IGameHandler.cs" t="Include" />
+            <e p="PlayerModifier.cs" t="Include" />
+          </e>
           <e p="Controllers" t="Include">
             <e p="AsteroidController.cs" t="Include" />
             <e p="BaseBulletController.cs" t="Include" />
@@ -17,6 +21,7 @@
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
             <e p="ShootController.cs" t="Include" />
           </e>
           <e p="Data" t="Include">
@@ -67,10 +72,6 @@
             <e p="InputModel.cs" t="Include" />
             <e p="PlayerModel.cs" t="Include" />
           </e>
-          <e p="MonoBehaviour" t="Include">
-            <e p="BulletCollision.cs" t="Include" />
-            <e p="EnemyCollision.cs" t="Include" />
-          </e>
           <e p="Pool" t="Include">
             <e p="BulletPool.cs" t="Include" />
             <e p="EnemyPool.cs" t="Include" />
@@ -87,6 +88,11 @@
               <e p="SingletonMonoBehaviour.cs" t="Include" />
             </e>
             <e p="Test.cs" t="Include" />
+          </e>
+          <e p="View" t="Include">
+            <e p="BulletCollision.cs" t="Include" />
+            <e p="EnemyCollision.cs" t="Include" />
+            <e p="PlayerView.cs" t="Include" />
           </e>
         </e>
         <e p="Plugins" t="Include">

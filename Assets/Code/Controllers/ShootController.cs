@@ -10,30 +10,35 @@ namespace DefaultNamespace
     {
         #region Fields
 
+        private readonly BulletData _data;
+        
         private readonly List<IDisposable> _coroutines = new List<IDisposable>();
         private readonly List<BaseBulletController> _bullets = new List<BaseBulletController>();
         private readonly Transform _barrelTransform;
         private readonly BulletPool _bulletPool;
         private readonly AudioSource _audioSource;
         private readonly float _bulletLifespan;
-        private readonly float _shootCooldown;
+        private float _shootCooldown;
         private float _timer;
 
         #endregion
-
         
-        public ShootController(BulletData bulletData, Transform barrelTransform, 
-            LaserFactory laserFactory, AudioSource audioSource)
+
+        public ShootController(BulletData bulletData, PlayerModel playerModel, 
+            LaserFactory laserFactory)
         {
-            var ratio = bulletData.BulletLifespan / bulletData.ShootCooldown;
+            _data = bulletData;
+            
+            var ratio = _data.BulletLifespan / _data.ShootCooldown;
             var poolSize = (int) Math.Ceiling(ratio);
-            _bulletPool = new BulletPool(poolSize, bulletData, laserFactory);
+            _bulletPool = new BulletPool(poolSize, _data, laserFactory);
             
-            _barrelTransform = barrelTransform;
-            _audioSource = audioSource;
+            _barrelTransform = playerModel.BarrelTransform;
+            _audioSource = playerModel.AudioSource;
+            playerModel.OnShootCooldownChanged += SetShootCooldown;
             
-            _bulletLifespan = bulletData.BulletLifespan;
-            _shootCooldown = bulletData.ShootCooldown;
+            _bulletLifespan = _data.BulletLifespan;
+            _shootCooldown = _data.ShootCooldown;
         }
 
         public void Execute(float deltaTime)
@@ -92,6 +97,16 @@ namespace DefaultNamespace
             {
                 _bulletPool.ReturnToPool(_bullets[id]);
             }
+        }
+
+        public void SetShootCooldown(float cooldown)
+        {
+            _shootCooldown = cooldown;
+        }
+
+        private void ResetShootCooldown()
+        {
+            _shootCooldown = _data.ShootCooldown;
         }
     }
 }
