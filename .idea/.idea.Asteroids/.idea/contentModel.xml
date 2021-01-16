@@ -9,8 +9,8 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="ChainOfResponsibility" t="Include">
-            <e p="IGameHandler.cs" t="Include" />
             <e p="PlayerModifier.cs" t="Include" />
+            <e p="ShootCooldownModifier.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
             <e p="AsteroidController.cs" t="Include" />

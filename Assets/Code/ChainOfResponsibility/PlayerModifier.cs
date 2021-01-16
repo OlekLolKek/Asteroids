@@ -1,6 +1,6 @@
 ﻿using DefaultNamespace;
 
-namespace ChainHandlers
+namespace ChainOfResponsibility
 {
     public class PlayerModifier
     {

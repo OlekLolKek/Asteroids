@@ -20,34 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/View.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/View/PlayerView.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/View/PlayerView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MonoBehaviour.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MonoBehaviour/BulletCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MonoBehaviour/BulletCollision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MonoBehaviour/EnemyCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/MonoBehaviour/EnemyCollision.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dust Particles/Prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dust Particles/Prefab/Stars.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Dust Particles/Prefab/Stars.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/PlayerData.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,8 +45,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/TagManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Models/PlayerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Factories/PlayerFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" />
@@ -106,14 +86,16 @@
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/GameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/PlayerModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/View/PlayerView.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/AttackModifier.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -178,7 +160,7 @@
       <workItem from="1608663510894" duration="1046000" />
       <workItem from="1608837087501" duration="850000" />
       <workItem from="1610695210946" duration="7710000" />
-      <workItem from="1610781998473" duration="8745000" />
+      <workItem from="1610781998473" duration="10693000" />
     </task>
     <servers />
   </component>

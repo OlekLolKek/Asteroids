@@ -6,12 +6,13 @@ using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class ShootController : IExecutable
+    public class ShootController : IExecutable, ICleanable
     {
         #region Fields
 
+        private readonly PlayerModel _playerModel;
         private readonly BulletData _data;
-        
+
         private readonly List<IDisposable> _coroutines = new List<IDisposable>();
         private readonly List<BaseBulletController> _bullets = new List<BaseBulletController>();
         private readonly Transform _barrelTransform;
@@ -32,11 +33,13 @@ namespace DefaultNamespace
             var ratio = _data.BulletLifespan / _data.ShootCooldown;
             var poolSize = (int) Math.Ceiling(ratio);
             _bulletPool = new BulletPool(poolSize, _data, laserFactory);
-            
-            _barrelTransform = playerModel.BarrelTransform;
-            _audioSource = playerModel.AudioSource;
-            playerModel.OnShootCooldownChanged += SetShootCooldown;
-            
+
+
+            _playerModel = playerModel;
+            _barrelTransform = _playerModel.BarrelTransform;
+            _audioSource = _playerModel.AudioSource;
+            _playerModel.OnShootCooldownChanged += SetShootCooldown;
+
             _bulletLifespan = _data.BulletLifespan;
             _shootCooldown = _data.ShootCooldown;
         }
@@ -99,14 +102,21 @@ namespace DefaultNamespace
             }
         }
 
-        public void SetShootCooldown(float cooldown)
+        private void SetShootCooldown(float cooldown)
         {
+            Debug.Log("SetShootCooldown");
+            Debug.Log($"{nameof(_shootCooldown)} set to {cooldown}");
             _shootCooldown = cooldown;
         }
 
         private void ResetShootCooldown()
         {
             _shootCooldown = _data.ShootCooldown;
+        }
+
+        public void Cleanup()
+        {
+            _playerModel.OnShootCooldownChanged -= SetShootCooldown;
         }
     }
 }
