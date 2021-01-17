@@ -1,4 +1,5 @@
 ﻿using ChainOfResponsibility;
+using Command;
 using UnityEngine;
 
 
@@ -27,6 +28,8 @@ namespace DefaultNamespace
 
             _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, 
                 asteroidFactory));
+
+            _controllers.Add(new UIController());
             
             _controllers.Initialize();
         }

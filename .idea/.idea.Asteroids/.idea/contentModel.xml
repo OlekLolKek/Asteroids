@@ -12,6 +12,14 @@
             <e p="PlayerModifier.cs" t="Include" />
             <e p="ShootCooldownModifier.cs" t="Include" />
           </e>
+          <e p="Command" t="Include">
+            <e p="BaseUI.cs" t="Include" />
+            <e p="NullPanel.cs" t="Include" />
+            <e p="PausePanel.cs" t="Include" />
+            <e p="ScorePanel.cs" t="Include" />
+            <e p="UIController.cs" t="Include" />
+            <e p="UiStates.cs" t="Include" />
+          </e>
           <e p="Controllers" t="Include">
             <e p="AsteroidController.cs" t="Include" />
             <e p="BaseBulletController.cs" t="Include" />

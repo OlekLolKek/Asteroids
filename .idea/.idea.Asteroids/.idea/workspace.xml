@@ -20,16 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/IGameHandler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +52,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Factories/PlayerFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Data/PlayerData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Bullet.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/BulletController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBulletFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BulletController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/BulletTrigger.cs" />
@@ -92,10 +93,16 @@
       <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/AttackModifier.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -104,17 +111,19 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34993446" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5920">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="5920" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -160,7 +169,8 @@
       <workItem from="1608663510894" duration="1046000" />
       <workItem from="1608837087501" duration="850000" />
       <workItem from="1610695210946" duration="7710000" />
-      <workItem from="1610781998473" duration="10693000" />
+      <workItem from="1610781998473" duration="12086000" />
+      <workItem from="1610871765306" duration="6974000" />
     </task>
     <servers />
   </component>
