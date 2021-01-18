@@ -20,6 +20,7 @@ namespace DefaultNamespace
 
             var playerModel = new PlayerModel(playerFactory);
             var inputModel = new InputModel();
+            var pointModel = new PointModel();
             
             _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
                 inputModel.Pause()));
@@ -27,9 +28,9 @@ namespace DefaultNamespace
             _controllers.Add(new PlayerController(_data, inputModel, playerModel));
 
             _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, 
-                asteroidFactory));
+                pointModel, asteroidFactory));
 
-            var uiController = new UIController(inputModel);
+            var uiController = new UIController(inputModel, pointModel);
 
             _controllers.Initialize();
         }

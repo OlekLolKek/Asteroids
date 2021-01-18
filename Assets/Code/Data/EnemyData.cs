@@ -18,6 +18,7 @@ namespace DefaultNamespace
         [SerializeField] private float _ySpawnOffset;
         [SerializeField] private float _colliderRadius;
         [SerializeField] private int _asteroidPoolSize;
+        [SerializeField] private int _pointsPerEnemy;
 
         #endregion
 
@@ -34,6 +35,7 @@ namespace DefaultNamespace
         public float YSpawnOffset => _ySpawnOffset;
         public float ColliderRadius => _colliderRadius;
         public int AsteroidPoolSize => _asteroidPoolSize;
+        public int PointsPerEnemy => _pointsPerEnemy;
 
         #endregion
     }

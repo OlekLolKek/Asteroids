@@ -20,31 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IBulletFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IBulletFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/BulletData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/BulletData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +49,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseEnemyController.cs" />
@@ -88,7 +74,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" />
@@ -96,13 +81,9 @@
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Models/Health.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" />
@@ -111,7 +92,14 @@
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/Health.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PointController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -180,7 +168,7 @@
       <workItem from="1610695210946" duration="7710000" />
       <workItem from="1610781998473" duration="12086000" />
       <workItem from="1610871765306" duration="11132000" />
-      <workItem from="1610958831876" duration="5159000" />
+      <workItem from="1610958831876" duration="13866000" />
     </task>
     <servers />
   </component>

@@ -38,7 +38,7 @@ namespace DefaultNamespace
         public bool TryKill(float damage)
         {
             Current -= damage;
-            return Current <= Max;
+            return Current <= 0;
         }
 
         public void ResetCurrent()

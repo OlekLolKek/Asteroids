@@ -11,7 +11,7 @@ namespace DefaultNamespace
         
         private readonly GameObject _instance;
         private readonly Rigidbody2D _rigidbody2D;
-        private readonly Vector2 _initialVelocity;
+        private readonly Vector2 _flyVelocity;
         
         private Transform _poolRoot;
         private Transform _player;
@@ -45,13 +45,12 @@ namespace DefaultNamespace
 
             _health = new Health(enemyData.Health, enemyData.Health);
 
-            _initialVelocity = enemyData.InitialVelocity;
+            _flyVelocity = enemyData.InitialVelocity;
         }
 
-        public BaseEnemyController InjectPlayerTransform(Transform player)
+        public void InjectPlayerTransform(Transform player)
         {
             _player = player;
-            return this;
         }
 
         public void Activate()
@@ -59,7 +58,7 @@ namespace DefaultNamespace
             IsActive = true;
             _instance.transform.position = new Vector3(Random.Range(_minX, _maxX),
                 _player.position.y + _yOffset);
-            _rigidbody2D.velocity = _initialVelocity;
+            _rigidbody2D.velocity = _flyVelocity;
         }
 
         public void ReturnToPool(Transform poolRoot)

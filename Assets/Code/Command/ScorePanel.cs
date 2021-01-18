@@ -10,13 +10,17 @@ namespace Command
         
         public override void Execute()
         {
-            _text.text = nameof(ScorePanel);
             gameObject.SetActive(true);
         }
 
         public override void Close()
         {
             gameObject.SetActive(false);
+        }
+
+        public void SetText(string newText)
+        {
+            _text.text = newText;
         }
     }
 }

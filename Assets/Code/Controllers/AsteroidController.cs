@@ -13,17 +13,22 @@ namespace DefaultNamespace
         private readonly List<BaseEnemyController> _asteroids = new List<BaseEnemyController>();
         private readonly Transform _playerTransform;
         private readonly EnemyPool _pool;
+        private readonly PointModel _pointModel;
         private readonly float _spawnTime;
+        private readonly int _pointPerEnemy;
+        
+        private IDisposable _coroutine;
         private float _timer;
 
-        private IDisposable _coroutine;
         
         public AsteroidController(EnemyData enemyData, PlayerModel playerModel, 
-            AsteroidFactory asteroidFactory)
+            PointModel pointModel, AsteroidFactory asteroidFactory)
         {
             _pool = new EnemyPool(enemyData.AsteroidPoolSize, enemyData, asteroidFactory);
             _spawnTime = enemyData.EnemyTimer;
+            _pointPerEnemy = enemyData.PointsPerEnemy;
             _playerTransform = playerModel.Transform;
+            _pointModel = pointModel;
         }
     
         public void Execute(float deltaTime)
@@ -73,6 +78,8 @@ namespace DefaultNamespace
                 _pool.ReturnToPool(asteroid);
             }
                 
+            _pointModel.AddPoints(_pointPerEnemy);
+            
             _coroutines[id].Dispose();
         }
         
