@@ -20,22 +20,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IBulletFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IBulletFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/BulletData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/BulletData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,24 +56,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/22/af0ecd1d/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/35/4e4aa7e1/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/69/a3085dc0/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IBulletFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BulletController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/BulletTrigger.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Data/BulletData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/BulletCollision.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Laser.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Factories/LaserFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Interfaces/IEnemyFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/EnemyCollision.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseBulletController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/MonoBehaviour/Asteroid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Managers/NameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Data/EnemyData.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Factories/AsteroidFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
@@ -78,11 +73,8 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocatorMonoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/IGameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/GameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/PlayerModifier.cs" />
@@ -94,15 +86,32 @@
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/PlayerModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/AttackModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainOfResponsibility/ShootCooldownModifier.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PlayerModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Input/PCInputKey.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Command/UiStates.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/View/EnemyCollision.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Models/Health.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IBulletFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IEnemyFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -120,10 +129,10 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
-    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="5920">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="5920" />
+      <option name="pid" />
       <option name="selectedOptions">
         <list />
       </option>
@@ -170,7 +179,8 @@
       <workItem from="1608837087501" duration="850000" />
       <workItem from="1610695210946" duration="7710000" />
       <workItem from="1610781998473" duration="12086000" />
-      <workItem from="1610871765306" duration="6974000" />
+      <workItem from="1610871765306" duration="11132000" />
+      <workItem from="1610958831876" duration="5159000" />
     </task>
     <servers />
   </component>

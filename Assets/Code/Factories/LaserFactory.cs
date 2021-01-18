@@ -5,26 +5,44 @@ namespace DefaultNamespace
 {
     public sealed class LaserFactory : IBulletFactory
     {
-        public GameObject Create(BulletData data)
+        private GameObject _instance;
+        
+        private bool _created;
+
+        public (GameObject, BulletCollision, Rigidbody2D) Create(BulletData data)
         {
-            var bullet = new GameObject(NameManager.LASER);
+            if (!_created)
+            {
+                _instance = new GameObject(NameManager.LASER);
 
-            bullet.AddComponent<SpriteRenderer>().sprite = data.BulletSprite;
+                _instance.AddComponent<SpriteRenderer>().sprite = data.BulletSprite;
 
-            var rigidbody = bullet.AddComponent<Rigidbody2D>();
-            rigidbody.gravityScale = 0.0f;
-            rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+                var rigidbody2D = _instance.AddComponent<Rigidbody2D>();
+                rigidbody2D.gravityScale = 0.0f;
+                rigidbody2D.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-            var collider = bullet.AddComponent<CapsuleCollider2D>();
-            collider.size = data.BulletColliderSize;
+                var collider = _instance.AddComponent<CapsuleCollider2D>();
+                collider.size = data.BulletColliderSize;
 
-            bullet.AddComponent<BulletCollision>();
+                var bulletCollision = _instance.AddComponent<BulletCollision>();
 
-            bullet.tag = TagManager.BULLET_TAG;
+                _instance.tag = TagManager.BULLET_TAG;
 
-            bullet.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
+                _instance.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
+
+                _created = true;
             
-            return bullet;
+                return (_instance, bulletCollision, rigidbody2D);
+            }
+            else
+            {
+                _instance = Object.Instantiate(_instance);
+
+                var bulletCollision = _instance.GetComponent<BulletCollision>();
+                var rigidbody2D = _instance.GetComponent<Rigidbody2D>();
+
+                return (_instance, bulletCollision, rigidbody2D);
+            }
         }
     }
 }

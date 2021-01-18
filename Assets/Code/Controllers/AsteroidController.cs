@@ -42,7 +42,7 @@ namespace DefaultNamespace
 
                 ManagePool(enemy);
 
-                enemy.OnEnemyHit += OnAsteroidHit;
+                enemy.OnEnemyKilled += OnAsteroidDestroyed;
                 enemy.Activate();
             }
         }
@@ -64,10 +64,10 @@ namespace DefaultNamespace
             }
         }
 
-        private void OnAsteroidHit(int id)
+        private void OnAsteroidDestroyed(int id)
         {
             var asteroid = _asteroids[id];
-            asteroid.OnEnemyHit -= OnAsteroidHit;
+            asteroid.OnEnemyKilled -= OnAsteroidDestroyed;
             if (asteroid.IsActive)
             {
                 _pool.ReturnToPool(asteroid);
@@ -81,7 +81,7 @@ namespace DefaultNamespace
             yield return new WaitForSeconds(delay);
 
             var asteroid = _asteroids[id];
-            asteroid.OnEnemyHit -= OnAsteroidHit;
+            asteroid.OnEnemyKilled -= OnAsteroidDestroyed;
             if (asteroid.IsActive)
             {
                 _pool.ReturnToPool(asteroid);

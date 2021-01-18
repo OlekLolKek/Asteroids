@@ -5,14 +5,11 @@ namespace DefaultNamespace
 {
     public class EnemyCollision : MonoBehaviour
     {
-        public event Action OnEnemyHit = delegate {  };
+        public event Action<float> OnEnemyHit = delegate(float damage) {  };
         
-        private void OnCollisionEnter2D(Collision2D other)
+        public void Hit(float damage)
         {
-            if (other.collider.CompareTag(TagManager.BULLET_TAG))
-            {
-                OnEnemyHit.Invoke();
-            }
+            OnEnemyHit.Invoke(damage);
         }
     }
 }

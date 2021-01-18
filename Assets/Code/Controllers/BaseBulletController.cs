@@ -15,6 +15,7 @@ namespace DefaultNamespace
         private readonly GameObject _instance;
         
         private readonly float _shootForce;
+        private readonly float _damage;
 
 
         public bool IsActive 
@@ -26,14 +27,16 @@ namespace DefaultNamespace
 
         public BaseBulletController(BulletData bulletData, IBulletFactory factory)
         {
-            _instance = factory.Create(bulletData);
+            var bullet = factory.Create(bulletData);
+            _instance = bullet.instance;
             
-            var collision = _instance.GetComponent<BulletCollision>();
+            var collision = bullet.collision;
             collision.OnBulletHit += BulletHit;
 
-            _rigidbody = _instance.GetComponent<Rigidbody2D>();
+            _rigidbody = bullet.rigidbody2D;
 
             _shootForce = bulletData.ShootForce;
+            _damage = bulletData.Damage;
         }
 
         public BaseBulletController InjectBarrelTransform(Transform barrel)
@@ -64,8 +67,12 @@ namespace DefaultNamespace
             IsActive = false;
         }
 
-        private void BulletHit()
+        private void BulletHit(Collision2D other)
         {
+            if (other.gameObject.TryGetComponent(out EnemyCollision enemyCollision))
+            {
+                enemyCollision.Hit(_damage);
+            }
             OnBulletHit.Invoke(ID);
         }
     }

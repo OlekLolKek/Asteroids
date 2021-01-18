@@ -5,26 +5,44 @@ namespace DefaultNamespace
 {
     public sealed class AsteroidFactory : IEnemyFactory
     {
-        public GameObject Create(EnemyData data)
+        private GameObject _instance;
+    
+        private bool _created;
+
+        public (GameObject, EnemyCollision, Rigidbody2D) Create(EnemyData data)
         {
-            var enemy = new GameObject(NameManager.ASTEROID);
+            if (!_created)
+            {
+                _instance = new GameObject(NameManager.ASTEROID);
 
-            enemy.AddComponent<SpriteRenderer>().sprite = data.AsteroidSprite;
+                _instance.AddComponent<SpriteRenderer>().sprite = data.AsteroidSprite;
 
-            var rigidbody = enemy.AddComponent<Rigidbody2D>();
-            rigidbody.gravityScale = 0.0f;
-            rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+                var rigidbody = _instance.AddComponent<Rigidbody2D>();
+                rigidbody.gravityScale = 0.0f;
+                rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
-            var collider = enemy.AddComponent<CircleCollider2D>();
-            collider.radius = data.ColliderRadius;
+                var collider = _instance.AddComponent<CircleCollider2D>();
+                collider.radius = data.ColliderRadius;
 
-            enemy.AddComponent<EnemyCollision>();
+                var enemyCollision = _instance.AddComponent<EnemyCollision>();
 
-            enemy.tag = TagManager.ENEMY_TAG;
+                _instance.tag = TagManager.ENEMY_TAG;
 
-            enemy.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
-            
-            return enemy;
+                _instance.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
+
+                _created = true;
+                
+                return (_instance, enemyCollision, rigidbody);
+            }
+            else
+            {
+                _instance = Object.Instantiate(_instance);
+
+                var enemyCollision = _instance.GetComponent<EnemyCollision>();
+                var rigidbody2D = _instance.GetComponent<Rigidbody2D>();
+
+                return (_instance, enemyCollision, rigidbody2D);
+            }
         }
     }
 }

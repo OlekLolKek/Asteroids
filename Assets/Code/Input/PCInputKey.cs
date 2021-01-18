@@ -5,7 +5,7 @@ namespace DefaultNamespace
 {
     public sealed class PCInputKey : IInputKeyPress
     {
-        public event Action<bool> OnKeyPressed = delegate(bool b) {  };
+        public event Action OnKeyPressed = delegate() {  };
         private KeyCode _keyCode;
         
         public PCInputKey(KeyCode keyCode)
@@ -17,7 +17,7 @@ namespace DefaultNamespace
         {
             if (Input.GetKeyDown(_keyCode))
             {
-                OnKeyPressed.Invoke(true);
+                OnKeyPressed.Invoke();
             }
         }
     }

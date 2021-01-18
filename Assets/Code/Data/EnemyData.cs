@@ -9,7 +9,8 @@ namespace DefaultNamespace
         #region Fields
         
         [SerializeField] private Sprite _asteroidSprite;
-        [SerializeField] private Health _health;
+        [SerializeField] private Vector2 _initialVelocity;
+        [SerializeField] private float _health;
         [SerializeField] private float _spriteScale;
         [SerializeField] private float _enemyTimer;
         [SerializeField] private float _minXPosition;
@@ -24,11 +25,12 @@ namespace DefaultNamespace
         #region Properties
         
         public Sprite AsteroidSprite => _asteroidSprite;
-        public Health Health => _health;
+        public Vector2 InitialVelocity => _initialVelocity;
+        public float Health => _health;
         public float SpriteScale => _spriteScale;
         public float EnemyTimer => _enemyTimer;
-        public float MINXPosition => _minXPosition;
-        public float MAXXPosition => _maxXPosition;
+        public float MinXPosition => _minXPosition;
+        public float MaxXPosition => _maxXPosition;
         public float YSpawnOffset => _ySpawnOffset;
         public float ColliderRadius => _colliderRadius;
         public int AsteroidPoolSize => _asteroidPoolSize;

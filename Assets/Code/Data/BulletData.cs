@@ -15,6 +15,7 @@ namespace DefaultNamespace
         [SerializeField] private float _bulletLifespan;
         [SerializeField] private float _spriteScale;
         [SerializeField] private float _shootCooldown;
+        [SerializeField] private float _damage;
 
         #endregion
 
@@ -25,5 +26,6 @@ namespace DefaultNamespace
         public float BulletLifespan => _bulletLifespan;
         public float SpriteScale => _spriteScale;
         public float ShootCooldown => _shootCooldown;
+        public float Damage => _damage;
     }
 }

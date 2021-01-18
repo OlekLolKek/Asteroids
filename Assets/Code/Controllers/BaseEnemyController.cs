@@ -7,13 +7,16 @@ namespace DefaultNamespace
 {
     public class BaseEnemyController
     {
-        public event Action<int> OnEnemyHit = delegate {  };
+        public event Action<int> OnEnemyKilled = delegate {  };
         
-        private GameObject _instance;
+        private readonly GameObject _instance;
+        private readonly Rigidbody2D _rigidbody2D;
+        private readonly Vector2 _initialVelocity;
+        
         private Transform _poolRoot;
         private Transform _player;
         private Health _health;
-
+        
         private readonly float _yOffset;
         private readonly float _minX;
         private readonly float _maxX;
@@ -28,14 +31,21 @@ namespace DefaultNamespace
 
         public BaseEnemyController(EnemyData enemyData, IEnemyFactory factory)
         {
-            _instance = factory.Create(enemyData);
+            var enemy = factory.Create(enemyData);
+            _instance = enemy.instance;
 
-            var collision = _instance.GetComponent<EnemyCollision>();
+            var collision = enemy.collision;
             collision.OnEnemyHit += EnemyHit;
 
+            _rigidbody2D = enemy.rigidbody2D;
+
             _yOffset = enemyData.YSpawnOffset;
-            _minX = enemyData.MINXPosition;
-            _maxX = enemyData.MAXXPosition;
+            _minX = enemyData.MinXPosition;
+            _maxX = enemyData.MaxXPosition;
+
+            _health = new Health(enemyData.Health, enemyData.Health);
+
+            _initialVelocity = enemyData.InitialVelocity;
         }
 
         public BaseEnemyController InjectPlayerTransform(Transform player)
@@ -49,6 +59,7 @@ namespace DefaultNamespace
             IsActive = true;
             _instance.transform.position = new Vector3(Random.Range(_minX, _maxX),
                 _player.position.y + _yOffset);
+            _rigidbody2D.velocity = _initialVelocity;
         }
 
         public void ReturnToPool(Transform poolRoot)
@@ -56,12 +67,17 @@ namespace DefaultNamespace
             _instance.transform.SetParent(poolRoot);
             _instance.transform.localPosition = Vector3.zero;
             _instance.transform.localRotation = Quaternion.identity;
+            _health.ResetCurrent();
+            _rigidbody2D.velocity = Vector2.zero;
             IsActive = false;
         }
 
-        private void EnemyHit()
+        private void EnemyHit(float damage)
         {
-            OnEnemyHit.Invoke(ID);
+            if (_health.TryKill(damage))
+            {
+                OnEnemyKilled.Invoke(ID);
+            }
         }
     }
 }

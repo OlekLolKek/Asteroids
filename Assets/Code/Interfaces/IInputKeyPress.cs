@@ -4,7 +4,7 @@ namespace DefaultNamespace
 {
     public interface IInputKeyPress
     {
-        event Action<bool> OnKeyPressed;
+        event Action OnKeyPressed;
         void GetKey();
     }
 }

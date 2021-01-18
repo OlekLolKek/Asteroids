@@ -4,6 +4,6 @@ namespace DefaultNamespace
 {
     public interface IBulletFactory
     {
-        GameObject Create(BulletData data);
+        (GameObject instance, BulletCollision collision, Rigidbody2D rigidbody2D) Create(BulletData data);
     }
 }

@@ -8,7 +8,7 @@
         private readonly IInputChangeAxis _pcInputVertical;
         private readonly IInputChangeAxis _pcInputMouseX;
         private readonly IInputChangeAxis _pcInputMouseY;
-        private readonly IInputKeyHold _pcInputAccelerate;
+        private readonly IInputKeyPress _pcInputPause;
 
         #endregion
 
@@ -18,7 +18,7 @@
             _pcInputVertical = new PCInputAxis(AxisManager.VERTICAL);
             _pcInputMouseX = new PCInputAxis(AxisManager.MOUSE_X);
             _pcInputMouseY = new PCInputAxis(AxisManager.MOUSE_Y);
-            _pcInputAccelerate = new PCInputKeyHold(AxisManager.ACCELERATE);
+            _pcInputPause = new PCInputKey(AxisManager.PAUSE);
         }
 
         public (IInputChangeAxis horizontal, IInputChangeAxis vertical) GetInputKeyboard()
@@ -33,9 +33,9 @@
             return result;
         }
 
-        public IInputKeyHold GetInputAccelerate()
+        public IInputKeyPress Pause()
         {
-            return _pcInputAccelerate;
+            return _pcInputPause;
         }
     }
 }

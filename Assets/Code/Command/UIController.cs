@@ -1,29 +1,34 @@
 ﻿using System.Collections.Generic;
 using DefaultNamespace;
-using UnityEditor.VersionControl;
 using UnityEngine;
 
 
 namespace Command
 {
-    public class UIController : IInitializable, IExecutable
+    public class UIController
     {
         private readonly ScorePanel _scorePanel;
         private readonly PausePanel _pausePanel;
+        private readonly NullPanel _nullPanel;
         private readonly Stack<UiStates> _uiStates = new Stack<UiStates>();
+
+        private readonly IInputKeyPress _pause;
+        
         private BaseUI _currentPanel;
 
 
-        public UIController()
+        public UIController(InputModel inputModel)
         {
+            _pause = inputModel.Pause();
+            _pause.OnKeyPressed += OnPauseKeyPressed;
+            
             _scorePanel = Object.FindObjectOfType<ScorePanel>();
             _pausePanel = Object.FindObjectOfType<PausePanel>();
-        }
-        
-        public void Initialize()
-        {
-            _scorePanel.Close();
+            _nullPanel = Object.FindObjectOfType<NullPanel>();
+            
             _pausePanel.Close();
+
+            _currentPanel = _nullPanel;
         }
 
         private void ChangePanel(UiStates uiStates, bool save = true)
@@ -35,8 +40,8 @@ namespace Command
 
             switch (uiStates)
             {
-                case UiStates.ScorePanel:
-                    _currentPanel = _scorePanel;
+                case UiStates.None:
+                    _currentPanel = _nullPanel;
                     break;
                 case UiStates.PausePanel:
                     _currentPanel = _pausePanel;
@@ -50,22 +55,15 @@ namespace Command
             }
         }
 
-        public void Execute(float deltaTime)
+        private void OnPauseKeyPressed()
         {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
+            if (_currentPanel != _nullPanel)
             {
-                ChangePanel(UiStates.ScorePanel);
+                ChangePanel(UiStates.None);
             }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
+            else
             {
                 ChangePanel(UiStates.PausePanel);
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (_uiStates.Count > 0)
-                {
-                    ChangePanel(_uiStates.Pop(), false);
-                }
             }
         }
     }

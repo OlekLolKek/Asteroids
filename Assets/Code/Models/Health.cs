@@ -7,10 +7,8 @@ namespace DefaultNamespace
     [Serializable]
     public sealed class Health
     {
-        [SerializeField]
-        private float _max;
-        [SerializeField]
-        private float _current;
+        [SerializeField] private float _max;
+        [SerializeField] private float _current;
         
         public float Max 
         { 
@@ -24,6 +22,8 @@ namespace DefaultNamespace
             private set => _current = value;
         }
 
+        #region Methods
+
         public Health(float max, float current)
         {
             Max = max;
@@ -34,5 +34,18 @@ namespace DefaultNamespace
         {
             Current = hp;
         }
+
+        public bool TryKill(float damage)
+        {
+            Current -= damage;
+            return Current <= Max;
+        }
+
+        public void ResetCurrent()
+        {
+            Current = Max;
+        }
+
+        #endregion
     }
 }

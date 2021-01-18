@@ -12,13 +12,14 @@ namespace DefaultNamespace
 
         private readonly PlayerModel _playerModel;
         private readonly BulletData _data;
-
         private readonly List<IDisposable> _coroutines = new List<IDisposable>();
         private readonly List<BaseBulletController> _bullets = new List<BaseBulletController>();
         private readonly Transform _barrelTransform;
         private readonly BulletPool _bulletPool;
         private readonly AudioSource _audioSource;
+        
         private readonly float _bulletLifespan;
+        
         private float _shootCooldown;
         private float _timer;
 

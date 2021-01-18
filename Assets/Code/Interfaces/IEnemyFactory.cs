@@ -4,6 +4,6 @@ namespace DefaultNamespace
 {
     public interface IEnemyFactory
     {
-        GameObject Create(EnemyData data);
+        (GameObject instance, EnemyCollision collision, Rigidbody2D rigidbody2D) Create(EnemyData data);
     }
 }

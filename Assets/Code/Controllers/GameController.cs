@@ -22,15 +22,15 @@ namespace DefaultNamespace
             var inputModel = new InputModel();
             
             _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
-                inputModel.GetInputAccelerate()));
+                inputModel.Pause()));
 
             _controllers.Add(new PlayerController(_data, inputModel, playerModel));
 
             _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, 
                 asteroidFactory));
 
-            _controllers.Add(new UIController());
-            
+            var uiController = new UIController(inputModel);
+
             _controllers.Initialize();
         }
 
