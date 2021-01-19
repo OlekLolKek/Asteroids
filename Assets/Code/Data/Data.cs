@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Abilities;
 using UnityEngine;
 
 
@@ -12,13 +13,15 @@ namespace DefaultNamespace
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _cameraDataPath;
         [SerializeField] private string _bulletDataPath;
+        [SerializeField] private string _explosionDataPath;
 
         private PlayerData _playerData;
         private EnemyData _enemyData;
         private CameraData _cameraData;
         private BulletData _bulletData;
-        
-        
+        private ExplosionData _explosionData;
+
+
         public PlayerData PlayerData
         {
             get
@@ -68,6 +71,19 @@ namespace DefaultNamespace
                 }
 
                 return _bulletData;
+            }
+        }
+
+        public ExplosionData ExplosionData
+        {
+            get
+            {
+                if (_explosionData == null)
+                {
+                    _explosionData = Load<ExplosionData>(_dataRootPath + _explosionDataPath);
+                }
+
+                return _explosionData;
             }
         }
 

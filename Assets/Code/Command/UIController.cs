@@ -85,8 +85,6 @@ namespace Command
             {
                 throw new ArgumentOutOfRangeException(nameof(points), "The amount of points can not be negative.");
             }
-
-            Debug.Log(points);
             
             if (points == 0) return "0";
             if (points > 1000000000000) return "Over9000";

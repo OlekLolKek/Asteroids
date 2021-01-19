@@ -16,6 +16,7 @@ namespace DefaultNamespace
         [SerializeField] private float _spriteScale;
         [SerializeField] private float _shootCooldown;
         [SerializeField] private float _damage;
+        [SerializeField] private int _layer;
 
         #endregion
 
@@ -27,5 +28,6 @@ namespace DefaultNamespace
         public float SpriteScale => _spriteScale;
         public float ShootCooldown => _shootCooldown;
         public float Damage => _damage;
+        public int Layer => _layer;
     }
 }

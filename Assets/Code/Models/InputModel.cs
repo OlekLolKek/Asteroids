@@ -9,6 +9,7 @@
         private readonly IInputChangeAxis _pcInputMouseX;
         private readonly IInputChangeAxis _pcInputMouseY;
         private readonly IInputKeyPress _pcInputPause;
+        private readonly IInputKeyPress _pcInputActiveSkill;
 
         #endregion
 
@@ -19,6 +20,7 @@
             _pcInputMouseX = new PCInputAxis(AxisManager.MOUSE_X);
             _pcInputMouseY = new PCInputAxis(AxisManager.MOUSE_Y);
             _pcInputPause = new PCInputKey(AxisManager.PAUSE);
+            _pcInputActiveSkill = new PCInputKey(AxisManager.ABILITY);
         }
 
         public (IInputChangeAxis horizontal, IInputChangeAxis vertical) GetInputKeyboard()
@@ -36,6 +38,11 @@
         public IInputKeyPress Pause()
         {
             return _pcInputPause;
+        }
+
+        public IInputKeyPress Ability()
+        {
+            return _pcInputActiveSkill;
         }
     }
 }

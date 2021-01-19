@@ -7,43 +7,59 @@ using Random = UnityEngine.Random;
 
 namespace Abilities
 {
-    public class AbilityController
+    public class AbilityController : IExecutable, ICleanable
     {
-        private List<IAbility> _passiveAbilities;
+        //private List<IAbility> _passiveAbilities;
+        private IActiveAbility _activeAbility;
         private InputModel _inputModel;
 
         
         #region Properties
 
-        public IAbility this[int index] => _passiveAbilities[index];
+        //public IAbility this[int index] => _passiveAbilities[index];
 
-        public int MaxDamage => _passiveAbilities.Select(a => a.Damage).Max();
+        //public int MaxDamage => _passiveAbilities.Select(a => a.Damage).Max();
 
         #endregion
         
 
-        public AbilityController(InputModel inputModel, IActiveAbility activeAbility,
-            List<IAbility> passivePassiveAbilities)
+        public AbilityController(InputModel inputModel, IActiveAbility activeAbility)
         {
             _inputModel = inputModel;
+            _inputModel.Ability().OnKeyPressed += ActivateAbility;
             
-            _passiveAbilities = passivePassiveAbilities;
+            _activeAbility = activeAbility;
         }
 
-        public IEnumerable<IAbility> GetAbility()
+        // public IEnumerable<IAbility> GetAbility()
+        // {
+        //     while (true)
+        //     {
+        //         yield return _passiveAbilities[Random.Range(0, _passiveAbilities.Count)];
+        //     }
+        // }
+
+        // public IEnumerator GetEnumerator()
+        // {
+        //     for (int i = 0; i < _passiveAbilities.Count; i++)
+        //     {
+        //         yield return _passiveAbilities[i];
+        //     }
+        // }
+
+        private void ActivateAbility()
         {
-            while (true)
-            {
-                yield return _passiveAbilities[Random.Range(0, _passiveAbilities.Count)];
-            }
+            _activeAbility.Cast();
         }
 
-        public IEnumerator GetEnumerator()
+        public void Execute(float deltaTime)
         {
-            for (int i = 0; i < _passiveAbilities.Count; i++)
-            {
-                yield return _passiveAbilities[i];
-            }
+            _activeAbility.Execute(deltaTime);
+        }
+
+        public void Cleanup()
+        {
+            _inputModel.Ability().OnKeyPressed -= ActivateAbility;
         }
     }
 }

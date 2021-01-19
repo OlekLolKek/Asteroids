@@ -3,6 +3,7 @@ using System.Linq;
 using Abilities;
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
     public sealed class PlayerController : IExecutable, ICleanable
@@ -27,25 +28,24 @@ namespace DefaultNamespace
             var cameraController = new CameraController(cameraModel, playerModel,
                 data.CameraData);
 
-            var abilityController = new AbilityController(inputModel, new List<IAbility>
-            {
-                new Explosion(),
-            });
+            var explosion = new Explosion(data.ExplosionData, playerModel);
             
-            Debug.Log(abilityController[0]);
-            Debug.Log(abilityController.MaxDamage);
-            foreach (var o in abilityController)
-            {
-                Debug.Log(o);
-            }
-
-            foreach (var o in abilityController.GetAbility().Take(2))
-            {
-                Debug.Log(o);
-            }
+            var abilityController = new AbilityController(inputModel, explosion);
+            
+            // Debug.Log(abilityController[0]);
+            // Debug.Log(abilityController.MaxDamage);
+            // foreach (var o in abilityController)
+            // {
+            //     Debug.Log(o);
+            // }
+            //
+            // foreach (var o in abilityController.GetAbility().Take(2))
+            // {
+            //     Debug.Log(o);
+            // }
 
             _controllers.Add(moveController).Add(shootController).
-                Add(cameraController).Initialize();
+                Add(cameraController).Add(abilityController).Initialize();
         }
         
         public void Execute(float deltaTime)

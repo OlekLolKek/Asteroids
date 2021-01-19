@@ -17,14 +17,29 @@ namespace Abilities
             } 
             private set => _view = value; 
         }
+
+        public SpriteRenderer SpriteRenderer
+        {
+            get
+            {
+                if (_spriteRenderer == null)
+                {
+                    Create();
+                }
+
+                return _spriteRenderer;
+            }
+            private set => _spriteRenderer = value;
+        }
         
         public GameObject Instance { get; private set; }
 
-        private readonly ActiveAbilityData _data;
+        private readonly ExplosionData _data;
 
         private IActiveAbilityView _view;
+        private SpriteRenderer _spriteRenderer;
 
-        public AbilityFactory(ActiveAbilityData data)
+        public AbilityFactory(ExplosionData data)
         {
             _data = data;
         }
@@ -34,6 +49,7 @@ namespace Abilities
             Instance = Object.Instantiate(_data.Prefab.gameObject);
 
             _view = Instance.GetComponent<IActiveAbilityView>();
+            _spriteRenderer = Instance.GetComponent<SpriteRenderer>();
 
             return Instance;
         }

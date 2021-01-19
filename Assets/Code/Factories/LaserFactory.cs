@@ -15,6 +15,8 @@ namespace DefaultNamespace
             {
                 _instance = new GameObject(NameManager.LASER);
 
+                _instance.layer = data.Layer;
+                
                 _instance.AddComponent<SpriteRenderer>().sprite = data.BulletSprite;
 
                 var rigidbody2D = _instance.AddComponent<Rigidbody2D>();
@@ -37,6 +39,7 @@ namespace DefaultNamespace
             else
             {
                 _instance = Object.Instantiate(_instance);
+                _instance.name = NameManager.LASER;
 
                 var bulletCollision = _instance.GetComponent<BulletCollision>();
                 var rigidbody2D = _instance.GetComponent<Rigidbody2D>();

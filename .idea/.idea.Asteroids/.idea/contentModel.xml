@@ -5,16 +5,19 @@
     <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Asteroids.-61067163.00" t="ExcludeRecursive" />
     <e p="C:\Users\notdn\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
     <e p="C:\Users\notdn\OneDrive\Рабочий стол\Asteroids" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Abilities" t="Include">
             <e p="AbilityController.cs" t="Include" />
             <e p="AbilityFactory.cs" t="Include" />
-            <e p="ActiveAbilityData.cs" t="Include" />
+            <e p="ActiveAbilityView.cs" t="Include" />
             <e p="Explosion.cs" t="Include" />
+            <e p="ExplosionData.cs" t="Include" />
             <e p="IAbility.cs" t="Include" />
             <e p="IActiveAbility.cs" t="Include" />
+            <e p="IActiveAbilityData.cs" t="Include" />
             <e p="IActiveAbilityView.cs" t="Include" />
             <e p="Target.cs" t="Include" />
           </e>
@@ -115,6 +118,20 @@
           </e>
         </e>
         <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
+          </e>
           <e p="UniRx" t="Include">
             <e p="Examples" t="Include">
               <e p="Sample01_ObservableWWW.cs" t="Include" />
@@ -132,6 +149,7 @@
               <e p="Sample13_ToDoApp.cs" t="Include" />
               <e p="UniRx.Examples.asmdef" t="Include" />
             </e>
+            <e p="readme.txt" t="Include" />
             <e p="Scripts" t="Include">
               <e p="Asynchronous" t="Include">
                 <e p="WebRequestExtensions.cs" t="Include" />

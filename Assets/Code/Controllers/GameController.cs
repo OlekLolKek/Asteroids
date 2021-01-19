@@ -23,7 +23,7 @@ namespace DefaultNamespace
             var pointModel = new PointModel();
             
             _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
-                inputModel.Pause()));
+                inputModel.Pause(), inputModel.Ability()));
 
             _controllers.Add(new PlayerController(_data, inputModel, playerModel));
 

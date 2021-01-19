@@ -21,3 +21,4 @@ MonoBehaviour:
   _spriteScale: 1
   _shootCooldown: 0.15
   _damage: 1
+  _layer: 8
