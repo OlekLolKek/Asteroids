@@ -20,19 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/EnemyData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Models/Health.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/EnemyData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,15 +47,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/22/af0ecd1d/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/35/4e4aa7e1/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/69/a3085dc0/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EBEB27C-A6DF-45BB-AEEC-500DC98FF733/35/11410d07/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/AsteroidController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/BulletPool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BaseEnemyController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Pool/EnemyPool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/IService.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Service.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocatorMonoBehaviour.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" />
@@ -65,7 +61,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/GameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/PlayerModifier.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/View/PlayerView.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/PlayerFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/PlayerData.cs" />
@@ -100,6 +95,13 @@
       <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -168,7 +170,8 @@
       <workItem from="1610695210946" duration="7710000" />
       <workItem from="1610781998473" duration="12086000" />
       <workItem from="1610871765306" duration="11132000" />
-      <workItem from="1610958831876" duration="13866000" />
+      <workItem from="1610958831876" duration="13956000" />
+      <workItem from="1611046867397" duration="4658000" />
     </task>
     <servers />
   </component>

@@ -8,6 +8,13 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
+          <e p="Abilities" t="Include">
+            <e p="Ability.cs" t="Include" />
+            <e p="AbilityController.cs" t="Include" />
+            <e p="DamageType.cs" t="Include" />
+            <e p="IAbility.cs" t="Include" />
+            <e p="Target.cs" t="Include" />
+          </e>
           <e p="ChainOfResponsibility" t="Include">
             <e p="PlayerModifier.cs" t="Include" />
             <e p="ShootCooldownModifier.cs" t="Include" />
