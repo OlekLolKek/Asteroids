@@ -9,59 +9,40 @@ namespace Abilities
 {
     public class AbilityController
     {
-        private List<IAbility> _abilities;
+        private List<IAbility> _passiveAbilities;
         private InputModel _inputModel;
 
         
         #region Properties
 
-        public IAbility this[int index] => _abilities[index];
+        public IAbility this[int index] => _passiveAbilities[index];
 
-        public string this[Target index]
-        {
-            get
-            {
-                var ability = _abilities.FirstOrDefault(a => a.Target == index);
-                return ability == null ? "Not supported." : ability.ToString();
-            }
-        }
-
-        public int MaxDamage => _abilities.Select(a => a.Damage).Max();
+        public int MaxDamage => _passiveAbilities.Select(a => a.Damage).Max();
 
         #endregion
         
 
-        public AbilityController(InputModel inputModel, List<IAbility> abilities)
+        public AbilityController(InputModel inputModel, IActiveAbility activeAbility,
+            List<IAbility> passivePassiveAbilities)
         {
             _inputModel = inputModel;
             
-            _abilities = abilities;
+            _passiveAbilities = passivePassiveAbilities;
         }
 
         public IEnumerable<IAbility> GetAbility()
         {
             while (true)
             {
-                yield return _abilities[Random.Range(0, _abilities.Count)];
+                yield return _passiveAbilities[Random.Range(0, _passiveAbilities.Count)];
             }
         }
 
         public IEnumerator GetEnumerator()
         {
-            for (int i = 0; i < _abilities.Count; i++)
+            for (int i = 0; i < _passiveAbilities.Count; i++)
             {
-                yield return _abilities[i];
-            }
-        }
-
-        public IEnumerable<IAbility> GetAbility(DamageType index)
-        {
-            foreach (var ability in _abilities)
-            {
-                if (ability.DamageType == index)
-                {
-                    yield return ability;
-                }
+                yield return _passiveAbilities[i];
             }
         }
     }

@@ -20,20 +20,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityFactory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbility.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbility.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbilityView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbilityView.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,18 +49,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/22/af0ecd1d/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/c9/9101106d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/35/4e4aa7e1/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/fa/539aaf4f/ExceptionArgument.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/69/a3085dc0/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EBEB27C-A6DF-45BB-AEEC-500DC98FF733/35/11410d07/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocator.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/ServiceLocatorMonoBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/Services.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Test/Singleton/SingletonMonoBehaviour.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/IGameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/GameHandler.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/ChainHandlers/PlayerModifier.cs" />
@@ -71,7 +71,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/NullPanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Interfaces/IInputKeyPress.cs" />
@@ -95,13 +94,20 @@
       <option value="$PROJECT_DIR$/Assets/Code/Command/ScorePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/PointModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/Target.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/DamageType.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/Ability.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IAttackAbilityData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/AbilityData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbility.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbilityView.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/AbilityFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -115,7 +121,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
@@ -171,7 +177,7 @@
       <workItem from="1610781998473" duration="12086000" />
       <workItem from="1610871765306" duration="11132000" />
       <workItem from="1610958831876" duration="13956000" />
-      <workItem from="1611046867397" duration="4658000" />
+      <workItem from="1611046867397" duration="9529000" />
     </task>
     <servers />
   </component>
@@ -194,5 +200,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

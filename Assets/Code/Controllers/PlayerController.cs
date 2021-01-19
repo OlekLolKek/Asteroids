@@ -29,14 +29,10 @@ namespace DefaultNamespace
 
             var abilityController = new AbilityController(inputModel, new List<IAbility>
             {
-                new Ability("Explosion", 100, Target.None, DamageType.Energy),
-                new Ability("Force Field", 0, Target.None, DamageType.None),
-                new Ability("Rocket Launcher", 500, Target.None | Target.Aoe, DamageType.Physical)
+                new Explosion(),
             });
             
             Debug.Log(abilityController[0]);
-            Debug.Log(abilityController[Target.None | Target.Aoe]);
-            Debug.Log(abilityController[Target.Passive | Target.None]);
             Debug.Log(abilityController.MaxDamage);
             foreach (var o in abilityController)
             {
@@ -44,11 +40,6 @@ namespace DefaultNamespace
             }
 
             foreach (var o in abilityController.GetAbility().Take(2))
-            {
-                Debug.Log(o);
-            }
-
-            foreach (var o in abilityController.GetAbility(DamageType.Energy))
             {
                 Debug.Log(o);
             }

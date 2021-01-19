@@ -9,10 +9,13 @@
       <e p="Assets" t="Include">
         <e p="Code" t="Include">
           <e p="Abilities" t="Include">
-            <e p="Ability.cs" t="Include" />
             <e p="AbilityController.cs" t="Include" />
-            <e p="DamageType.cs" t="Include" />
+            <e p="AbilityFactory.cs" t="Include" />
+            <e p="ActiveAbilityData.cs" t="Include" />
+            <e p="Explosion.cs" t="Include" />
             <e p="IAbility.cs" t="Include" />
+            <e p="IActiveAbility.cs" t="Include" />
+            <e p="IActiveAbilityView.cs" t="Include" />
             <e p="Target.cs" t="Include" />
           </e>
           <e p="ChainOfResponsibility" t="Include">
