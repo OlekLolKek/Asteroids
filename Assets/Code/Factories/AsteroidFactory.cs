@@ -20,7 +20,7 @@ namespace DefaultNamespace
                 var rigidbody = _instance.AddComponent<Rigidbody2D>();
                 rigidbody.gravityScale = 0.0f;
                 rigidbody.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-                rigidbody.isKinematic = true;
+                rigidbody.mass = data.Mass;
 
                 var collider = _instance.AddComponent<CircleCollider2D>();
                 collider.radius = data.ColliderRadius;

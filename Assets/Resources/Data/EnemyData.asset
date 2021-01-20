@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5651d759752e41f3aed55bd5208636e9, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  _asteroidSprite: {fileID: 21300000, guid: 264f9fc257019d74a92ea3508776b6f5, type: 3}
+  _asteroidSprite: {fileID: 21300000, guid: 5cd868e8bec430341954b9f7efe211f1, type: 3}
   _initialVelocity: {x: 0, y: 4}
-  _health: 3
+  _health: 25
   _spriteScale: 1
   _enemyTimer: 5
   _minXPosition: -8.5
@@ -23,3 +23,4 @@ MonoBehaviour:
   _colliderRadius: 0.3545
   _asteroidPoolSize: 3
   _pointsPerEnemy: 100
+  _mass: 50

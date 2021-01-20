@@ -20,5 +20,5 @@ MonoBehaviour:
   _bulletLifespan: 1
   _spriteScale: 1
   _shootCooldown: 0.15
-  _damage: 1
+  _damage: 7
   _layer: 8

@@ -19,6 +19,7 @@ namespace DefaultNamespace
         [SerializeField] private float _colliderRadius;
         [SerializeField] private int _asteroidPoolSize;
         [SerializeField] private int _pointsPerEnemy;
+        [SerializeField] private int _mass;
 
         #endregion
 
@@ -36,6 +37,7 @@ namespace DefaultNamespace
         public float ColliderRadius => _colliderRadius;
         public int AsteroidPoolSize => _asteroidPoolSize;
         public int PointsPerEnemy => _pointsPerEnemy;
+        public int Mass => _mass;
 
         #endregion
     }
