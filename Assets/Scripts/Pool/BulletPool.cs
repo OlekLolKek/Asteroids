@@ -9,17 +9,17 @@ namespace DefaultNamespace
 {
     public class BulletPool
     {
-        private readonly Dictionary<BulletTypes, HashSet<Bullet>> _bulletPool;
-        private IBulletFactory _factory;
-        private readonly int _poolCapacity;
+        private readonly Dictionary<BulletTypes, HashSet<BaseBulletController>> _bulletPool;
+        private readonly IBulletFactory _factory;
         private readonly BulletData _bulletData;
         private readonly Transform _poolRoot;
+        private readonly int _poolCapacity;
         private int _id = 0;
 
         public BulletPool(int poolCapacity, BulletData bulletData, IBulletFactory factory)
         {
             _factory = factory;
-            _bulletPool = new Dictionary<BulletTypes, HashSet<Bullet>>();
+            _bulletPool = new Dictionary<BulletTypes, HashSet<BaseBulletController>>();
             _poolCapacity = poolCapacity;
             _bulletData = bulletData;
             if (!_poolRoot)
@@ -28,13 +28,13 @@ namespace DefaultNamespace
             }
         }
 
-        public Bullet GetBullet(BulletTypes type)
+        public BaseBulletController GetBullet(BulletTypes type)
         {
-            Bullet result;
+            BaseBulletController result;
             switch (type)
             {
                 case BulletTypes.Laser:
-                    result = GetBullet(GetListBullets(type));
+                    result = GetBullet(GetBulletHashSet(type));
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type), type, "Не предусмотрен в программе");
@@ -43,38 +43,40 @@ namespace DefaultNamespace
             return result;
         }
 
-        private HashSet<Bullet> GetListBullets(BulletTypes type)
+        private HashSet<BaseBulletController> GetBulletHashSet(BulletTypes type)
         {
-            return _bulletPool.ContainsKey(type) ? _bulletPool[type] : _bulletPool[type] = new HashSet<Bullet>();
+            if (!_bulletPool.ContainsKey(type))
+            {
+                _bulletPool[type] = new HashSet<BaseBulletController>();
+            }
+            
+            return _bulletPool[type];
         }
 
-        private Bullet GetBullet(HashSet<Bullet> bullets)
+        private BaseBulletController GetBullet(HashSet<BaseBulletController> bullets)
         {
-            var bullet = bullets.FirstOrDefault(a => !a.gameObject.activeSelf);
+            var bullet = bullets.FirstOrDefault(a => !a.IsActive);
+            
             if (bullet == null)
             {
-                var prefab = Resources.Load<Bullet>(PathManager.BULLET_LASER_PATH);
                 for (int i = 0; i < _poolCapacity; i++)
                 {
-                    var instantiate = Object.Instantiate(prefab);
-                    instantiate.ID = _id++;
-                    ReturnToPool(instantiate.transform);
-                    bullets.Add(instantiate);
+                    var newBullet = new BaseBulletController(_bulletData, _factory);
+                    newBullet.ID = _id++;
+                    ReturnToPool(newBullet);
+                    bullets.Add(newBullet);
                 }
 
                 GetBullet(bullets);
             }
 
-            bullet = bullets.FirstOrDefault(a => !a.gameObject.activeSelf);
+            bullet = bullets.FirstOrDefault(a => !a.IsActive);
             return bullet;
         }
 
-        public void ReturnToPool(Transform transform)
+        public void ReturnToPool(BaseBulletController bullet)
         {
-            transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
-            transform.gameObject.SetActive(false);
-            transform.SetParent(_poolRoot);
+            bullet.ReturnToPool(_poolRoot);
         }
 
         public void DeletePool()

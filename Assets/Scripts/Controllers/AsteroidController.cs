@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ namespace DefaultNamespace
 {
     public sealed class AsteroidController : IExecutable
     {
+        private readonly List<IDisposable> _coroutines = new List<IDisposable>();
+        private readonly List<BaseEnemyController> _asteroids = new List<BaseEnemyController>();
         private readonly Transform _playerTransform;
         private readonly EnemyPool _pool;
         private readonly float _spawnTime;
@@ -15,9 +18,9 @@ namespace DefaultNamespace
 
         private IDisposable _coroutine;
         
-        public AsteroidController(EnemyData enemyData, PlayerModel playerModel, AsteroidFactory asteroidFactory)
+        public AsteroidController(EnemyData enemyData, PlayerModel playerModel, 
+            AsteroidFactory asteroidFactory)
         {
-            //TODO: Заменить число на поле
             _pool = new EnemyPool(enemyData.AsteroidPoolSize, enemyData, asteroidFactory);
             _spawnTime = enemyData.EnemyTimer;
             _playerTransform = playerModel.Transform;
@@ -34,30 +37,55 @@ namespace DefaultNamespace
             if (_timer >= _spawnTime)
             {
                 _timer = 0.0f;
+                
                 var enemy = _pool.GetEnemy(EnemyTypes.Asteroid);
-                var position = _playerTransform.position;
-                //TODO: Заменить число на поле
-                enemy.transform.position = new Vector3(position.x, position.y + 15.0f);
-                enemy.gameObject.SetActive(true);
+
+                ManagePool(enemy);
+
                 enemy.OnEnemyHit += OnAsteroidHit;
-                _coroutine = ReturnToPool(enemy, _spawnTime).ToObservable().Subscribe();
+                enemy.Activate();
             }
         }
 
-        private void OnAsteroidHit(Enemy asteroid)
+        private void ManagePool(BaseEnemyController enemy)
         {
+            if (!_asteroids.Contains(enemy))
+            {
+                _asteroids.Add(enemy);
+                var coroutine = ReturnToPool(enemy.ID, _spawnTime).
+                    ToObservable().Subscribe();
+                _coroutines.Add(coroutine);
+                enemy.InjectPlayerTransform(_playerTransform);
+            }
+            else
+            {
+                _coroutines[enemy.ID] = ReturnToPool(enemy.ID, _spawnTime).
+                    ToObservable().Subscribe();
+            }
+        }
+
+        private void OnAsteroidHit(int id)
+        {
+            var asteroid = _asteroids[id];
             asteroid.OnEnemyHit -= OnAsteroidHit;
-            if (asteroid.transform)
-                _pool.ReturnToPool(asteroid.transform);
+            if (asteroid.IsActive)
+            {
+                _pool.ReturnToPool(asteroid);
+            }
+                
             _coroutine.Dispose();
         }
         
-        private IEnumerator ReturnToPool(Enemy asteroid, float delay)
+        private IEnumerator ReturnToPool(int id, float delay)
         {
             yield return new WaitForSeconds(delay);
+
+            var asteroid = _asteroids[id];
             asteroid.OnEnemyHit -= OnAsteroidHit;
-            if (asteroid.gameObject.activeSelf) 
-                _pool.ReturnToPool(asteroid.transform);
+            if (asteroid.IsActive)
+            {
+                _pool.ReturnToPool(asteroid);
+            }
         }
     }
 }
