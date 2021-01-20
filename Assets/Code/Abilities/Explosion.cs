@@ -22,8 +22,8 @@ namespace Abilities
         private float _timer;
 
         private readonly Transform _playerTransform;
-        private readonly Color _startColor;
-        private readonly Color _endColor;
+        private readonly Vector3 _rotation = new Vector3(0, 0, 180);
+        private readonly float _endTweenTime = 0.25f;
         private readonly float _delay = 0.1f;
 
 
@@ -40,8 +40,6 @@ namespace Abilities
             _coolDown = data.Cooldown;
             _tweenTime = data.TweenTime;
             _maxScale = data.MaxScale;
-            _startColor = data.StartColor;
-            _endColor = data.EndColor;
 
             _playerTransform = playerModel.Transform;
         }
@@ -66,8 +64,6 @@ namespace Abilities
 
         private void OnCollisionEnter(Collision2D other)
         {
-            Debug.Log(other.gameObject.name);
-            Debug.Log(other.gameObject.GetComponent<EnemyCollision>());
             if (other.gameObject.TryGetComponent(out EnemyCollision collision))
             {
                 Debug.Log(collision);
@@ -81,11 +77,16 @@ namespace Abilities
             Instance.SetActive(true);
             Instance.transform.position = _playerTransform.position;
             Instance.transform.DOScale(_maxScale, _tweenTime);
+            
             yield return new WaitForSeconds(_tweenTime + _delay);
-            _spriteRenderer.DOColor(_endColor, _tweenTime);
-            yield return new WaitForSeconds(_tweenTime + _delay);
+            
+            Instance.transform.DORotate(_rotation, _endTweenTime);
+            Instance.transform.DOScale(Vector3.zero, _endTweenTime);
+            
+            yield return new WaitForSeconds(_endTweenTime + _delay);
+            
             Instance.transform.localScale = Vector3.zero;
-            _spriteRenderer.color = _startColor;
+            Instance.transform.rotation = Quaternion.identity;
             Instance.SetActive(false);
         }
 

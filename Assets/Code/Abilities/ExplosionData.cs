@@ -8,19 +8,14 @@ namespace Abilities
         [SerializeField] private GameObject _prefab;
         [SerializeField] private int _damage;
         [SerializeField] private float _cooldown;
-
-        [SerializeField] private Color _startColor;
-        [SerializeField] private Color _endColor;
+        
         [SerializeField] private Vector3 _maxScale;
         [SerializeField] private float _tweenTime;
         
         public GameObject Prefab => _prefab;
         public int Damage => _damage;
         public float Cooldown => _cooldown;
-
-
-        public Color StartColor => _startColor;
-        public Color EndColor => _endColor;
+        
         public Vector3 MaxScale => _maxScale;
         public float TweenTime => _tweenTime;
     }

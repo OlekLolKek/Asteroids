@@ -26,7 +26,7 @@ namespace DefaultNamespace
             _camera.orthographic = true;
             _camera.orthographicSize = _cameraData.CameraSize;
             _camera.clearFlags = CameraClearFlags.Color;
-            _camera.backgroundColor = Color.black;
+            _camera.backgroundColor = _cameraData.BackgroundColor;
             
             var postProcessing = camera.AddComponent<PostProcessLayer>();
             postProcessing.Init(_cameraData.PostProcessResources);

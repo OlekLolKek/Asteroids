@@ -20,6 +20,7 @@ MonoBehaviour:
     m_Bits: 1024
   _cameraPosition: {x: 0, y: 4.5, z: -10}
   _particlesPosition: {x: 0, y: 15, z: 10}
+  _backgroundColor: {r: 0.2509804, g: 0.3137255, b: 0.0627451, a: 0}
   _cameraSize: 8
   _cameraName: Camera
   _assetsPPU: 16

@@ -28,8 +28,9 @@ namespace Command
 
             _pointModel = pointModel;
             _pointModel.OnPointsChanged += OnPointsChanged;
-            
+
             _scorePanel = Object.FindObjectOfType<ScorePanel>();
+            _scorePanel.SetText("0");
             _pausePanel = Object.FindObjectOfType<PausePanel>();
             _nullPanel = Object.FindObjectOfType<NullPanel>();
             
@@ -87,10 +88,10 @@ namespace Command
             }
             
             if (points == 0) return "0";
-            if (points > 1000000000000) return "Over9000";
-            if (points > 1000000000) return ($"{(float)points / 1000000000:f1}B");
-            if (points > 1000000) return $"{(float)points / 1000000:f1}M";
-            if (points > 1000) return $"{(float)points / 1000:f1}K";
+            if (points >= 1000000000000) return "Over9000";
+            if (points >= 1000000000) return ($"{(float)points / 1000000000:f1}B");
+            if (points >= 1000000) return $"{(float)points / 1000000:f1}M";
+            if (points >= 1000) return $"{(float)points / 1000:f1}K";
 
             return points.ToString();
         }

@@ -22,5 +22,5 @@ MonoBehaviour:
   _ySpawnOffset: 15
   _colliderRadius: 0.3545
   _asteroidPoolSize: 3
-  _pointsPerEnemy: 100
-  _mass: 50
+  _pointsPerEnemy: 250
+  _mass: 250

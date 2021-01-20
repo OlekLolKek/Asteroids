@@ -18,4 +18,4 @@ MonoBehaviour:
   _startColor: {r: 1, g: 1, b: 1, a: 0.7490196}
   _endColor: {r: 1, g: 1, b: 1, a: 0}
   _maxScale: {x: 20, y: 20, z: 0}
-  _tweenTime: 1
+  _tweenTime: 0.75
