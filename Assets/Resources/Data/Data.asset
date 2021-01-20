@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59450312430046df98ace7e8d7d894ae, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
+  _dataRootPath: Data/
   _playerDataPath: PlayerData
+  _enemyDataPath: EnemyData
+  _cameraDataPath: CameraData
+  _bulletDataPath: BulletData

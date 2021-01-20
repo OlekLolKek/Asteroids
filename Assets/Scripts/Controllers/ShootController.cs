@@ -1,32 +1,98 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UniRx;
+using UnityEngine;
 
 namespace DefaultNamespace
 {
-    public class ShootController : IControllable
+    public class ShootController : IExecutable
     {
-        private readonly IInputKeyPress _inputShoot;
-        private readonly Rigidbody2D _bulletPrefab;
+        //TODO: Сделать из ужасного кода ниже что-то нормальное
+        
+        #region Fields
+
+        private readonly Dictionary<int, IDisposable> _coroutines = new Dictionary<int, IDisposable>();
+        private readonly List<Bullet> _bullets = new List<Bullet>();
         private readonly Transform _barrelTransform;
+        private readonly BulletPool _bulletPool;
+        private readonly AudioSource _audioSource;
         private readonly float _shootForce;
         private readonly float _bulletLifespan;
+        private readonly float _scale;
+        private readonly float _shootCooldown;
+        private float _timer;
         
-        public ShootController(IInputKeyPress inputShoot, PlayerData playerData, Transform barrelTransform)
+        private IDisposable _coroutine;
+
+        #endregion
+
+        
+        public ShootController(BulletData bulletData, Transform barrelTransform, 
+            LaserFactory laserFactory, AudioSource audioSource)
         {
-            _inputShoot = inputShoot;
+            _bulletPool = new BulletPool(12, bulletData, laserFactory);
             _barrelTransform = barrelTransform;
-            _bulletPrefab = playerData.BulletPrefab;
-            _shootForce = playerData.ShootForce;
-            _bulletLifespan = playerData.BulletLifespan;
-            _inputShoot.OnKeyPressed += OnShootButtonPressed;
+            _shootForce = bulletData.ShootForce;
+            _bulletLifespan = bulletData.BulletLifespan;
+            _scale = bulletData.SpriteScale;
+            _shootCooldown = bulletData.ShootCooldown;
+            _audioSource = audioSource;
         }
 
-        private void OnShootButtonPressed(bool b)
+        public void Execute(float deltaTime)
         {
-            var bullet = Object.Instantiate(_bulletPrefab, _barrelTransform.position, _barrelTransform.rotation, _barrelTransform);
-            bullet.transform.localPosition = new Vector3(bullet.transform.localPosition.x, bullet.transform.localPosition.y + 1);
-            bullet.transform.SetParent(null);
-            bullet.AddForce(_barrelTransform.up * _shootForce);
-            Object.Destroy(bullet.gameObject, _bulletLifespan);
+            Shoot(deltaTime);
+        }
+
+        private void Shoot(float deltaTime)
+        {
+            _timer += deltaTime;
+            if (_timer >= _shootCooldown)
+            {
+                _timer = 0.0f;
+                var bullet = _bulletPool.GetBullet(BulletTypes.Laser);
+                
+                if (!_coroutines.ContainsKey(bullet.ID))
+                {
+                    var coroutine = _coroutine = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
+                    _coroutines.Add(bullet.ID, coroutine);
+                    _bullets.Add(bullet);
+                }
+                else
+                {
+                    _coroutines[bullet.ID] = ReturnToPool(bullet.ID, _bulletLifespan).ToObservable().Subscribe();
+                }
+                
+                var transform = bullet.transform;
+                var rigidbody = bullet.GetComponent<Rigidbody2D>();
+                bullet.gameObject.SetActive(true);
+                transform.localScale = new Vector3(_scale, _scale);
+                transform.position = _barrelTransform.position;
+                rigidbody.AddForce(transform.up * _shootForce);
+                bullet.OnBulletHit += OnBulletHit;
+                _audioSource.Play();
+            }
+        }
+
+        private void OnBulletHit(Bullet bullet)
+        {
+            bullet.OnBulletHit -= OnBulletHit;
+            if (bullet.gameObject.activeSelf)
+            {
+                _bulletPool.ReturnToPool(bullet.transform);
+            }
+                
+            _coroutine.Dispose();
+        }
+
+        private IEnumerator ReturnToPool(int id, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            
+            _bullets[id].OnBulletHit -= OnBulletHit;
+            if (_bullets[id].gameObject.activeSelf)
+                _bulletPool.ReturnToPool(_bullets[id].transform);
         }
     }
 }
