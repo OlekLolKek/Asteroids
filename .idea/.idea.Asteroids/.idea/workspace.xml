@@ -23,6 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/ExplosionData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/ExplosionData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Command.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Command/BaseUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs.meta" afterDir="false" />
@@ -113,7 +114,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/ExplosionData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Command/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/LaserFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/BulletData.cs" />
@@ -122,8 +122,9 @@
       <option value="$PROJECT_DIR$/Assets/Code/Factories/AsteroidFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Abilities/Explosion.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Abilities/ExplosionData.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -195,7 +196,7 @@
       <workItem from="1610958831876" duration="13956000" />
       <workItem from="1611046867397" duration="15040000" />
       <workItem from="1611075276873" duration="1547000" />
-      <workItem from="1611137293469" duration="3939000" />
+      <workItem from="1611137293469" duration="4572000" />
     </task>
     <servers />
   </component>

@@ -30,7 +30,7 @@ namespace DefaultNamespace
             _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, 
                 pointModel, asteroidFactory));
 
-            var uiController = new UIController(inputModel, pointModel);
+            _controllers.Add(new UIController(inputModel, pointModel));
 
             _controllers.Initialize();
         }

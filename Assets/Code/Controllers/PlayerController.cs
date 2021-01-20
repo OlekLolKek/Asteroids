@@ -31,18 +31,6 @@ namespace DefaultNamespace
             var explosion = new Explosion(data.ExplosionData, playerModel);
             
             var abilityController = new AbilityController(inputModel, explosion);
-            
-            // Debug.Log(abilityController[0]);
-            // Debug.Log(abilityController.MaxDamage);
-            // foreach (var o in abilityController)
-            // {
-            //     Debug.Log(o);
-            // }
-            //
-            // foreach (var o in abilityController.GetAbility().Take(2))
-            // {
-            //     Debug.Log(o);
-            // }
 
             _controllers.Add(moveController).Add(shootController).
                 Add(cameraController).Add(abilityController).Initialize();

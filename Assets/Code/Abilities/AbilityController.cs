@@ -9,19 +9,9 @@ namespace Abilities
 {
     public class AbilityController : IExecutable, ICleanable
     {
-        //private List<IAbility> _passiveAbilities;
         private IActiveAbility _activeAbility;
         private InputModel _inputModel;
 
-        
-        #region Properties
-
-        //public IAbility this[int index] => _passiveAbilities[index];
-
-        //public int MaxDamage => _passiveAbilities.Select(a => a.Damage).Max();
-
-        #endregion
-        
 
         public AbilityController(InputModel inputModel, IActiveAbility activeAbility)
         {
@@ -30,22 +20,6 @@ namespace Abilities
             
             _activeAbility = activeAbility;
         }
-
-        // public IEnumerable<IAbility> GetAbility()
-        // {
-        //     while (true)
-        //     {
-        //         yield return _passiveAbilities[Random.Range(0, _passiveAbilities.Count)];
-        //     }
-        // }
-
-        // public IEnumerator GetEnumerator()
-        // {
-        //     for (int i = 0; i < _passiveAbilities.Count; i++)
-        //     {
-        //         yield return _passiveAbilities[i];
-        //     }
-        // }
 
         private void ActivateAbility()
         {
