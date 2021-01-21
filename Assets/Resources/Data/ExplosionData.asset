@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6915414311802594499, guid: 3e5fe2940447a2d4ca7210fe9936ec3c, type: 3}
   _damage: 50
-  _cooldown: 3
-  _startColor: {r: 1, g: 1, b: 1, a: 0.7490196}
-  _endColor: {r: 1, g: 1, b: 1, a: 0}
+  _cooldown: 10
+  _explosionClip: {fileID: 8300000, guid: 49391f606ab3c2c4eb276d45048d4401, type: 3}
+  _shrinkClip: {fileID: 8300000, guid: dda194553b872984fb75d55e15de0e33, type: 3}
   _maxScale: {x: 20, y: 20, z: 0}
   _tweenTime: 0.75

@@ -15,13 +15,16 @@ namespace Abilities
         public int Damage { get; }
 
         private IActiveAbilityView _view;
-        private SpriteRenderer _spriteRenderer;
+        private AudioSource _audioSource;
+
         private Vector3 _maxScale;
         private float _tweenTime;
         private float _coolDown;
         private float _timer;
 
         private readonly Transform _playerTransform;
+        private readonly AudioClip _explosionClip;
+        private readonly AudioClip _shrinkClip;
         private readonly Vector3 _rotation = new Vector3(0, 0, 180);
         private readonly float _endTweenTime = 0.25f;
         private readonly float _delay = 0.1f;
@@ -31,8 +34,7 @@ namespace Abilities
         {
             var factory = new AbilityFactory(data);
             Instance = factory.Create();
-            Instance.SetActive(false);
-            _spriteRenderer = factory.SpriteRenderer;
+            _audioSource = factory.AudioSource;
             _view = factory.View;
             _view.OnCollision += OnCollisionEnter;
             
@@ -40,8 +42,12 @@ namespace Abilities
             _coolDown = data.Cooldown;
             _tweenTime = data.TweenTime;
             _maxScale = data.MaxScale;
+            _explosionClip = data.ExplosionClip;
+            _shrinkClip = data.ShrinkClip;
 
             _playerTransform = playerModel.Transform;
+            
+            Instance.SetActive(false);
         }
 
         public void Execute(float deltaTime)
@@ -75,14 +81,18 @@ namespace Abilities
         {
             _timer = _coolDown;
             Instance.SetActive(true);
+            _audioSource.clip = _explosionClip;
+            _audioSource.Play();
             Instance.transform.position = _playerTransform.position;
             Instance.transform.DOScale(_maxScale, _tweenTime);
-            
+
             yield return new WaitForSeconds(_tweenTime + _delay);
             
+            _audioSource.clip = _shrinkClip;
+            _audioSource.Play();
             Instance.transform.DORotate(_rotation, _endTweenTime);
             Instance.transform.DOScale(Vector3.zero, _endTweenTime);
-            
+
             yield return new WaitForSeconds(_endTweenTime + _delay);
             
             Instance.transform.localScale = Vector3.zero;

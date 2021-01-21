@@ -31,13 +31,27 @@ namespace Abilities
             }
             private set => _spriteRenderer = value;
         }
-        
+
+        public AudioSource AudioSource
+        {
+            get
+            {
+                if (_audioSource == null)
+                {
+                    Create();
+                }
+
+                return _audioSource;
+            }
+        }
+
         public GameObject Instance { get; private set; }
 
         private readonly ExplosionData _data;
 
         private IActiveAbilityView _view;
         private SpriteRenderer _spriteRenderer;
+        private AudioSource _audioSource;
 
         public AbilityFactory(ExplosionData data)
         {
@@ -50,6 +64,7 @@ namespace Abilities
 
             _view = Instance.GetComponent<IActiveAbilityView>();
             _spriteRenderer = Instance.GetComponent<SpriteRenderer>();
+            _audioSource = Instance.GetComponent<AudioSource>();
 
             return Instance;
         }
