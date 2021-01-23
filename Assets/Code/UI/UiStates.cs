@@ -1,4 +1,4 @@
-﻿namespace Command
+﻿namespace UI
 {
     public enum UiStates
     {

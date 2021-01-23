@@ -1,5 +1,5 @@
 ﻿using ChainOfResponsibility;
-using Command;
+using UI;
 using UnityEngine;
 
 
@@ -21,16 +21,31 @@ namespace DefaultNamespace
             var playerModel = new PlayerModel(playerFactory);
             var inputModel = new InputModel();
             var pointModel = new PointModel();
+            var uiModel = new UIModel();
             
-            _controllers.Add(new InputController(inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
+            var enemyPool = new EnemyPool(
+                _data.EnemyData.AsteroidPoolSize, _data.EnemyData, 
+                asteroidFactory);
+            
+            _controllers.Add(new InputController(
+                inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
                 inputModel.Pause(), inputModel.Ability()));
 
-            _controllers.Add(new PlayerController(_data, inputModel, playerModel));
+            _controllers.Add(new PlayerController(
+                _data, inputModel, 
+                playerModel, uiModel));
 
-            _controllers.Add(new AsteroidController(_data.EnemyData, playerModel, 
-                pointModel, asteroidFactory));
+            _controllers.Add(new AsteroidController(
+                _data.EnemyData, playerModel, 
+                pointModel, asteroidFactory,
+                enemyPool));
 
-            _controllers.Add(new UIController(inputModel, pointModel));
+            _controllers.Add(new UIController(
+                inputModel, pointModel, 
+                enemyPool, uiModel));
+
+            _controllers.Add(new PauseController(
+                uiModel));
 
             _controllers.Initialize();
         }

@@ -22,5 +22,8 @@ MonoBehaviour:
   _particlesPosition: {x: 0, y: 15, z: 10}
   _backgroundColor: {r: 0.2509804, g: 0.3137255, b: 0.0627451, a: 0}
   _cameraSize: 8
+  _playPosition: 0
+  _pausePosition: -6
+  _tweenTime: 0.15
   _cameraName: Camera
-  _assetsPPU: 16
+  _assetsPpu: 16

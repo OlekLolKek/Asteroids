@@ -22,9 +22,10 @@ namespace DefaultNamespace
 
         
         public AsteroidController(EnemyData enemyData, PlayerModel playerModel, 
-            PointModel pointModel, AsteroidFactory asteroidFactory)
+            PointModel pointModel, AsteroidFactory asteroidFactory,
+            EnemyPool pool)
         {
-            _pool = new EnemyPool(enemyData.AsteroidPoolSize, enemyData, asteroidFactory);
+            _pool = pool;
             _spawnTime = enemyData.EnemyTimer;
             _pointPerEnemy = enemyData.PointsPerEnemy;
             _playerTransform = playerModel.Transform;
@@ -69,18 +70,18 @@ namespace DefaultNamespace
             }
         }
 
-        private void OnAsteroidDestroyed(int id)
+        private void OnAsteroidDestroyed(BaseEnemyController enemy)
         {
-            var asteroid = _asteroids[id];
+            var asteroid = _asteroids[enemy.ID];
             asteroid.OnEnemyKilled -= OnAsteroidDestroyed;
             if (asteroid.IsActive)
             {
-                _pool.ReturnToPool(asteroid);
+                _pool.ReturnKilledToPool(asteroid);
             }
                 
             _pointModel.AddPoints(_pointPerEnemy);
             
-            _coroutines[id].Dispose();
+            _coroutines[enemy.ID].Dispose();
         }
         
         private IEnumerator ReturnToPool(int id, float delay)

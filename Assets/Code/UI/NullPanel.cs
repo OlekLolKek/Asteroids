@@ -1,6 +1,6 @@
-﻿namespace Command
+﻿namespace UI
 {
-    public class NullPanel : BaseUI
+    public sealed class NullPanel : BaseUI
     {
         public override void Execute()
         {

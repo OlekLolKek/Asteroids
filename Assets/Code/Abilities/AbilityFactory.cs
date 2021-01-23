@@ -2,7 +2,7 @@
 
 namespace Abilities
 {
-    public class AbilityFactory
+    public sealed class AbilityFactory
     {
         public IActiveAbilityView View 
         {

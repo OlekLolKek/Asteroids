@@ -34,6 +34,7 @@
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
+            <e p="PauseController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="ShootController.cs" t="Include" />
           </e>
@@ -90,25 +91,14 @@
             <e p="BulletPool.cs" t="Include" />
             <e p="EnemyPool.cs" t="Include" />
           </e>
-          <e p="Test" t="Include">
-            <e p="ServiceLocator" t="Include">
-              <e p="IService.cs" t="Include" />
-              <e p="Service.cs" t="Include" />
-              <e p="ServiceLocator.cs" t="Include" />
-              <e p="ServiceLocatorMonoBehaviour.cs" t="Include" />
-            </e>
-            <e p="Singleton" t="Include">
-              <e p="Services.cs" t="Include" />
-              <e p="SingletonMonoBehaviour.cs" t="Include" />
-            </e>
-            <e p="Test.cs" t="Include" />
-          </e>
           <e p="UI" t="Include">
             <e p="BaseUI.cs" t="Include" />
+            <e p="LastKilledEnemyPanel.cs" t="Include" />
             <e p="NullPanel.cs" t="Include" />
             <e p="PausePanel.cs" t="Include" />
             <e p="ScorePanel.cs" t="Include" />
             <e p="UIController.cs" t="Include" />
+            <e p="UIModel.cs" t="Include" />
             <e p="UiStates.cs" t="Include" />
           </e>
           <e p="View" t="Include">

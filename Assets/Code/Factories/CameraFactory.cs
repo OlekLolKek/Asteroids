@@ -35,8 +35,9 @@ namespace DefaultNamespace
             postProcessing.antialiasingMode = PostProcessLayer.Antialiasing.TemporalAntialiasing;
 
             var pixelPerfect = camera.AddComponent<PixelPerfectCamera>();
-            pixelPerfect.assetsPPU = _cameraData.AssetsPPU;
+            pixelPerfect.assetsPPU = _cameraData.AssetsPpu;
             pixelPerfect.upscaleRT = true;
+            pixelPerfect.pixelSnapping = true;
 
             var particles = Object.Instantiate(_cameraData.ParticlesPrefab, camera.transform);
             var position = camera.transform.position;

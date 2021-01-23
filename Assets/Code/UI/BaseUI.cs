@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-namespace Command
+namespace UI
 {
     public abstract class BaseUI : MonoBehaviour
     {

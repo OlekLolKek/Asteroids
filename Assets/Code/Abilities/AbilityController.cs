@@ -7,10 +7,10 @@ using Random = UnityEngine.Random;
 
 namespace Abilities
 {
-    public class AbilityController : IExecutable, ICleanable
+    public sealed class AbilityController : IExecutable, ICleanable
     {
-        private IActiveAbility _activeAbility;
-        private InputModel _inputModel;
+        private readonly IActiveAbility _activeAbility;
+        private readonly InputModel _inputModel;
 
 
         public AbilityController(InputModel inputModel, IActiveAbility activeAbility)

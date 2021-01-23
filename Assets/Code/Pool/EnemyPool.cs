@@ -9,12 +9,14 @@ namespace DefaultNamespace
 {
     public class EnemyPool
     {
+        public event Action<BaseEnemyController> OnEnemyKilledAndReturned = delegate(BaseEnemyController controller) {  };
+        
         private readonly Dictionary<EnemyTypes, HashSet<BaseEnemyController>> _enemyPool;
         private readonly IEnemyFactory _factory;
         private readonly EnemyData _enemyData;
         private readonly Transform _poolRoot;
         private readonly int _poolCapacity;
-        private int _id = 0;
+        private int _id;
 
 
         public EnemyPool(int poolCapacity, EnemyData enemyData, IEnemyFactory factory)
@@ -78,6 +80,12 @@ namespace DefaultNamespace
         public void ReturnToPool(BaseEnemyController enemy)
         {
             enemy.ReturnToPool(_poolRoot);
+        }
+
+        public void ReturnKilledToPool(BaseEnemyController enemy)
+        {
+            enemy.ReturnToPool(_poolRoot);
+            OnEnemyKilledAndReturned.Invoke(enemy);
         }
 
         public void DeletePool()

@@ -16,8 +16,11 @@ namespace DefaultNamespace
         [SerializeField] private Vector3 _particlesPosition;
         [SerializeField] private Color _backgroundColor;
         [SerializeField, Range(0, 10)] private float _cameraSize;
+        [SerializeField] private float _playPosition;
+        [SerializeField] private float _pausePosition;
+        [SerializeField] private float _tweenTime;
         [SerializeField] private string _cameraName;
-        [SerializeField] private int _assetsPPU;
+        [SerializeField] private int _assetsPpu;
 
 
         #endregion
@@ -32,8 +35,11 @@ namespace DefaultNamespace
         public Vector3 ParticlesPosition => _particlesPosition;
         public Color BackgroundColor => _backgroundColor;
         public float CameraSize => _cameraSize;
+        public float PlayPosition => _playPosition;
+        public float PausePosition => _pausePosition;
+        public float TweenTime => _tweenTime;
         public string CameraName => _cameraName;
-        public int AssetsPPU => _assetsPPU;
+        public int AssetsPpu => _assetsPpu;
 
         #endregion
     }

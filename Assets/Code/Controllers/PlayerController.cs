@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Abilities;
+using UI;
 using UnityEngine;
 
 
@@ -11,7 +12,7 @@ namespace DefaultNamespace
         private readonly Controllers _controllers;
 
         public PlayerController(Data data, InputModel inputModel,
-            PlayerModel playerModel)
+            PlayerModel playerModel, UIModel uiModel)
         {
             _controllers = new Controllers();
             
@@ -26,7 +27,7 @@ namespace DefaultNamespace
             var shootController = new ShootController(data.BulletData, playerModel, laserFactory);
             
             var cameraController = new CameraController(cameraModel, playerModel,
-                data.CameraData);
+                data.CameraData, uiModel);
 
             var explosion = new Explosion(data.ExplosionData, playerModel);
             

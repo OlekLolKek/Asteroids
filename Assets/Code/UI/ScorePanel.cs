@@ -2,9 +2,9 @@
 using UnityEngine.UI;
 
 
-namespace Command
+namespace UI
 {
-    public class ScorePanel : BaseUI
+    public sealed class ScorePanel : BaseUI
     {
         [SerializeField] private Text _text;
         
