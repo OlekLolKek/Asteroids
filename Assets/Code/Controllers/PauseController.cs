@@ -1,11 +1,12 @@
 ﻿using UI;
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
-    public class PauseController : ICleanable
+    public sealed class PauseController : ICleanable
     {
-        private UIModel _uiModel;
+        private readonly UIModel _uiModel;
         
         public PauseController(UIModel uiModel)
         {

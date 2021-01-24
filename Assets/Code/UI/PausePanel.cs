@@ -13,14 +13,20 @@ namespace UI
         public event Action<bool> OnPanelSwitched = delegate(bool b) {  };
         public event Action<bool> ReadyToPause = delegate(bool b) {  };
         public event Action<UiStates> OnResumeButtonPressed = delegate(UiStates states) {  };
-        
+
+        [SerializeField] private Canvas _canvas;
+        [SerializeField] private Image _image;
         [SerializeField] private float _shownPosition;
         [SerializeField] private float _hiddenPosition;
         [SerializeField] private float _tweenTime;
+
+        public Canvas Canvas => _canvas;
+        public Image Image => _image;
         
         public override void Execute()
         {
             ShowPanel().ToObservable().Subscribe();
+            _hiddenPosition = -Image.rectTransform.sizeDelta.x * Canvas.scaleFactor;
         }
 
         public override void Close()
@@ -37,6 +43,11 @@ namespace UI
         public void Exit()
         {
             Close();
+        }
+
+        public void SetClosedPosition(float position)
+        {
+            _hiddenPosition = position;
         }
 
         private IEnumerator HidePanel()

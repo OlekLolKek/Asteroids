@@ -20,52 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/LastKilledEnemyPanel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/LastKilledEnemyPanel.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/UIModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/UIModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/AbilityFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Pool/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Pool/EnemyPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/IService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/IService.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/Service.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/Service.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/ServiceLocator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/ServiceLocator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/ServiceLocator/ServiceLocatorMonoBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Singleton.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Singleton/Services.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Singleton/Services.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Singleton/SingletonMonoBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Singleton/SingletonMonoBehaviour.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Test.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Test/Test.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/NullPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/NullPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/ScorePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/ScorePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UiStates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UiStates.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stars.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stars.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,10 +101,10 @@
       <option value="$PROJECT_DIR$/Assets/Code/Data/CameraData.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -220,6 +181,7 @@
       <workItem from="1611224519851" duration="2405000" />
       <workItem from="1611310499380" duration="6904000" />
       <workItem from="1611398422728" duration="9753000" />
+      <workItem from="1611484864024" duration="963000" />
     </task>
     <servers />
   </component>
