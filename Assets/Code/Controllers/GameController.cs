@@ -1,19 +1,19 @@
-﻿using ChainOfResponsibility;
+﻿using DefaultNamespace;
 using UI;
 using UnityEngine;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public class GameController : MonoBehaviour
     {
         [SerializeField] private Data _data;
-        private Controllers _controllers;
+        private global::Controllers.ControllerList _controllerList;
 
 
         private void Start()
         {
-            _controllers = new Controllers();
+            _controllerList = new global::Controllers.ControllerList();
             
             var asteroidFactory = new AsteroidFactory();
             var playerFactory = new PlayerFactory(_data.PlayerData);
@@ -21,50 +21,50 @@ namespace DefaultNamespace
             var playerModel = new PlayerModel(playerFactory);
             var inputModel = new InputModel();
             var pointModel = new PointModel();
-            var uiModel = new UIModel();
+            var pauseModel = new PauseModel();
             
             var enemyPool = new EnemyPool(
                 _data.EnemyData.AsteroidPoolSize, _data.EnemyData, 
                 asteroidFactory);
             
-            _controllers.Add(new InputController(
+            _controllerList.Add(new InputController(
                 inputModel.GetInputKeyboard(), inputModel.GetInputMouse(),
                 inputModel.Pause(), inputModel.Ability()));
 
-            _controllers.Add(new PlayerController(
+            _controllerList.Add(new PlayerController(
                 _data, inputModel, 
-                playerModel, uiModel));
+                playerModel, pauseModel));
 
-            _controllers.Add(new AsteroidController(
+            _controllerList.Add(new AsteroidController(
                 _data.EnemyData, playerModel, 
                 pointModel, asteroidFactory,
                 enemyPool));
 
-            _controllers.Add(new UIController(
+            _controllerList.Add(new UIController(
                 inputModel, pointModel, 
-                enemyPool, uiModel));
+                enemyPool, pauseModel));
 
-            _controllers.Add(new PauseController(
-                uiModel));
+            _controllerList.Add(new PauseController(
+                pauseModel));
 
-            _controllers.Initialize();
+            _controllerList.Initialize();
         }
 
         private void Update()
         {
             var deltaTime = Time.deltaTime;
-            _controllers.Execute(deltaTime);
+            _controllerList.Execute(deltaTime);
         }
 
         private void LateUpdate()
         {
             var deltaTime = Time.deltaTime;
-            _controllers.LateExecute(deltaTime);
+            _controllerList.LateExecute(deltaTime);
         }
 
         private void OnDestroy()
         {
-            _controllers.Cleanup();
+            _controllerList.Cleanup();
         }
     }
 }

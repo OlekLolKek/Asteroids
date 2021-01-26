@@ -1,15 +1,17 @@
 ﻿using System.Collections.Generic;
+using DefaultNamespace;
 
-namespace DefaultNamespace
+
+namespace Controllers
 {
-    public class Controllers : IInitializable, IExecutable, ILateExecutable, ICleanable
+    public class ControllerList : IInitializable, IExecutable, ILateExecutable, ICleanable
     {
         private readonly List<IInitializable> _initializeControllers;
         private readonly List<IExecutable> _executeControllers;
         private readonly List<ILateExecutable> _lateControllers;
         private readonly List<ICleanable> _cleanupControllers;
         
-        internal Controllers()
+        internal ControllerList()
         {
             _initializeControllers = new List<IInitializable>();
             _executeControllers = new List<IExecutable>();
@@ -17,7 +19,7 @@ namespace DefaultNamespace
             _cleanupControllers = new List<ICleanable>();
         }
 
-        internal Controllers Add(IControllable controller)
+        internal ControllerList Add(IControllable controller)
         {
             if (controller is IInitializable initialize)
             {

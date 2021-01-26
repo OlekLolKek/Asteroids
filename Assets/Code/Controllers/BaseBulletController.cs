@@ -1,16 +1,18 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
-    public class BaseBulletController
+    public sealed class BaseBulletController : ICleanable
     {
         public event Action<int> OnBulletHit = delegate {  };
         
         private Transform _barrelTransform;
         private AudioSource _audioSource;
 
+        private readonly BulletCollision _collision;
         private readonly Rigidbody2D _rigidbody;
         private readonly GameObject _instance;
         
@@ -30,8 +32,8 @@ namespace DefaultNamespace
             var bullet = factory.Create(bulletData);
             _instance = bullet.instance;
             
-            var collision = bullet.collision;
-            collision.OnBulletHit += BulletHit;
+            _collision = bullet.collision;
+            _collision.OnBulletHit += BulletHit;
 
             _rigidbody = bullet.rigidbody2D;
 
@@ -74,6 +76,11 @@ namespace DefaultNamespace
                 enemyCollision.Hit(_damage);
             }
             OnBulletHit.Invoke(ID);
+        }
+
+        public void Cleanup()
+        {
+            _collision.OnBulletHit -= BulletHit;
         }
     }
 }

@@ -30,7 +30,7 @@
             <e p="BaseBulletController.cs" t="Include" />
             <e p="BaseEnemyController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
-            <e p="Controllers.cs" t="Include" />
+            <e p="ControllerList.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
@@ -92,13 +92,18 @@
             <e p="EnemyPool.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="BaseUI.cs" t="Include" />
-            <e p="LastKilledEnemyPanel.cs" t="Include" />
+            <e p="BasePanel.cs" t="Include" />
+            <e p="BasePanelController.cs" t="Include" />
+            <e p="LastEnemyKilledPanel.cs" t="Include" />
+            <e p="LastEnemyKilledPanelController.cs" t="Include" />
             <e p="NullPanel.cs" t="Include" />
+            <e p="NullPanelController.cs" t="Include" />
+            <e p="PauseModel.cs" t="Include" />
             <e p="PausePanel.cs" t="Include" />
+            <e p="PausePanelController.cs" t="Include" />
             <e p="ScorePanel.cs" t="Include" />
+            <e p="ScorePanelController.cs" t="Include" />
             <e p="UIController.cs" t="Include" />
-            <e p="UIModel.cs" t="Include" />
             <e p="UiStates.cs" t="Include" />
           </e>
           <e p="View" t="Include">

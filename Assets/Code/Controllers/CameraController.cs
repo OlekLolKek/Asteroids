@@ -1,16 +1,17 @@
-﻿using System.Collections;
+﻿using DefaultNamespace;
 using DG.Tweening;
 using UI;
 using UnityEngine;
 
-namespace DefaultNamespace
+
+namespace Controllers
 {
     public class CameraController : IExecutable, ICleanable
     {
         private readonly Transform _playerTransform;
         private readonly Transform _cameraTransform;
         private readonly Vector3 _cameraPosition;
-        private readonly UIModel _uiModel;
+        private readonly PauseModel _pauseModel;
 
         private readonly float _playPosition;
         private readonly float _pausePosition;
@@ -18,7 +19,7 @@ namespace DefaultNamespace
 
 
         public CameraController(CameraModel cameraModel, PlayerModel playerFactory,
-            CameraData cameraData, UIModel uiModel)
+            CameraData cameraData, PauseModel pauseModel)
         {
             _cameraTransform = cameraModel.CameraTransform;
             
@@ -29,8 +30,8 @@ namespace DefaultNamespace
             _pausePosition = cameraData.PausePosition;
             _tweenTime = cameraData.TweenTime;
             
-            _uiModel = uiModel;
-            _uiModel.PausePanel.OnPanelSwitched += SwitchPause;
+            _pauseModel = pauseModel;
+            _pauseModel.OnPausePanelSwitched += SwitchPause;
         }
         
         public void Execute(float deltaTime)
@@ -60,7 +61,7 @@ namespace DefaultNamespace
 
         public void Cleanup()
         {
-            _uiModel.PausePanel.OnPanelSwitched -= SwitchPause;
+            _pauseModel.OnPausePanelSwitched -= SwitchPause;
         }
     }
 }

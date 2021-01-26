@@ -1,17 +1,18 @@
-﻿using UI;
+﻿using DefaultNamespace;
+using UI;
 using UnityEngine;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public sealed class PauseController : ICleanable
     {
-        private readonly UIModel _uiModel;
+        private readonly PauseModel _pauseModel;
         
-        public PauseController(UIModel uiModel)
+        public PauseController(PauseModel pauseModel)
         {
-            _uiModel = uiModel;
-            _uiModel.PausePanel.ReadyToPause += SwitchPause;
+            _pauseModel = pauseModel;
+            _pauseModel.OnApplicationPaused += SwitchPause;
         }
 
         private void SwitchPause(bool isPaused)
@@ -28,7 +29,7 @@ namespace DefaultNamespace
 
         public void Cleanup()
         {
-            _uiModel.PausePanel.ReadyToPause -= SwitchPause;
+            _pauseModel.OnApplicationPaused -= SwitchPause;
         }
     }
 }

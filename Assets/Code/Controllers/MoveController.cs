@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public sealed class MoveController : IExecutable, ICleanable
     {

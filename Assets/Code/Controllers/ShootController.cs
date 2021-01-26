@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UniRx;
 using UnityEngine;
 
-namespace DefaultNamespace
+
+namespace Controllers
 {
     public class ShootController : IExecutable, ICleanable
     {
@@ -105,8 +107,6 @@ namespace DefaultNamespace
 
         private void SetShootCooldown(float cooldown)
         {
-            Debug.Log("SetShootCooldown");
-            Debug.Log($"{nameof(_shootCooldown)} set to {cooldown}");
             _shootCooldown = cooldown;
         }
 
@@ -118,6 +118,15 @@ namespace DefaultNamespace
         public void Cleanup()
         {
             _playerModel.OnShootCooldownChanged -= SetShootCooldown;
+            foreach (var bullet in _bullets)
+            {
+                bullet.Cleanup();
+            }
+
+            foreach (var coroutine in _coroutines)
+            {
+                coroutine.Dispose();
+            }
         }
     }
 }

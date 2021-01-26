@@ -1,13 +1,6 @@
 ﻿namespace UI
 {
-    public sealed class NullPanel : BaseUI
+    public sealed class NullPanel : BasePanel
     {
-        public override void Execute()
-        {
-        }
-
-        public override void Close()
-        {
-        }
     }
 }

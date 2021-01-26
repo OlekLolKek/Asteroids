@@ -1,9 +1,10 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public class BaseEnemyController
     {
