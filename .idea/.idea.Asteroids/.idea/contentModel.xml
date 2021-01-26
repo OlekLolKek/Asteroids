@@ -101,6 +101,12 @@
             <e p="PauseModel.cs" t="Include" />
             <e p="PausePanel.cs" t="Include" />
             <e p="PausePanelController.cs" t="Include" />
+            <e p="PausePanelTween" t="Include">
+              <e p="Extensions.cs" t="Include" />
+              <e p="ISidePanelElementTween.cs" t="Include" />
+              <e p="MoveMode.cs" t="Include" />
+              <e p="SidePanelTween.cs" t="Include" />
+            </e>
             <e p="ScorePanel.cs" t="Include" />
             <e p="ScorePanelController.cs" t="Include" />
             <e p="UIController.cs" t="Include" />

@@ -20,46 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/BasePanelController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/BasePanelController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanelController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanelController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/NullPanelController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/NullPanelController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/ScorePanelController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/ScorePanelController.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/AsteroidController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseBulletController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/BaseEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ControllerList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/Controllers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ControllerList.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/MoveController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PauseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Controllers/ShootController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Pool/BulletPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Pool/BulletPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Pool/EnemyPool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Pool/EnemyPool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/BasePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/BaseUI.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/BasePanel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/LastKilledEnemyPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/LastKilledEnemyPanel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/NullPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/NullPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/ScorePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/ScorePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PauseModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIModel.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PauseModel.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/View/BulletCollision.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/StarSmall.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,10 +62,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbilityView.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/ActiveAbilityData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbilityData.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/Abilities/IActiveAbility.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Managers/AxisManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Models/InputModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Data/Data.cs" />
@@ -118,7 +89,6 @@
       <option value="$PROJECT_DIR$/Assets/Code/UI/NullPanelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/LastEnemyKilledPanelController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/ScorePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/ScorePanelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/UIModel.cs" />
@@ -133,11 +103,16 @@
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/ControllerList.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PauseModel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/CameraController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/GameController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Controllers/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -220,7 +195,7 @@
       <workItem from="1611510784141" duration="1773000" />
       <workItem from="1611567023382" duration="1445000" />
       <workItem from="1611585429095" duration="6023000" />
-      <workItem from="1611660155358" duration="6187000" />
+      <workItem from="1611660155358" duration="11162000" />
     </task>
     <servers />
   </component>

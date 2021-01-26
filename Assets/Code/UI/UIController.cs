@@ -49,6 +49,8 @@ namespace UI
             _pausePanelController.OnResumeButtonPressed += ChangePanelController;
 
             _currentPanelController = _nullPanelController;
+            
+            _controllers.Initialize();
         }
 
         private void ChangePanelController(UiStates uiStates)

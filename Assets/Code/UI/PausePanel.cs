@@ -6,6 +6,7 @@ namespace UI
 {
     public sealed class PausePanel : BasePanel
     {
+        [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private Button _resumeButton;
         [SerializeField] private Button _exitButton;
         [SerializeField] private Canvas _canvas;
@@ -15,6 +16,7 @@ namespace UI
         [SerializeField] private float _tweenTime;
 
 
+        public RectTransform RectTransform => _rectTransform;
         public Button ResumeButton => _resumeButton;
         public Button ExitButton => _exitButton;
         public Canvas Canvas => _canvas;
