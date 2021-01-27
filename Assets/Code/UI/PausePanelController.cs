@@ -115,7 +115,7 @@ namespace UI
 
         private void ShowPausePanel()
         {
-            _view.gameObject.SetActive(true);
+            Move(MoveMode.Show).AppendCallback(() => { _view.gameObject.SetActive(true); });
             _elementTweens.ForEach(t => t.GoToEnd(MoveMode.Hide));
         }
 

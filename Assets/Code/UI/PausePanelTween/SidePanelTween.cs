@@ -9,12 +9,12 @@ namespace UI.PausePanelTween
         private static readonly Vector2 InAnchorMin = new Vector2(0.0f, 0.0f);
         private static readonly Vector2 OutAnchorMax = new Vector2(0.0f, 1.0f);
         private static readonly Vector2 InAnchorMax = new Vector2(1.0f, 1.0f);
-        private readonly RectTransform moveRoot;
+        private readonly RectTransform _moveRoot;
 
 
         public SidePanelTween(RectTransform moveRoot)
         {
-            this.moveRoot = moveRoot;
+            _moveRoot = moveRoot;
         }
 
 
@@ -23,14 +23,12 @@ namespace UI.PausePanelTween
             switch (mode)
             {
                 case MoveMode.Show:
-                    moveRoot.anchorMin = InAnchorMin;
-                    moveRoot.anchorMax = InAnchorMax;
+                    _moveRoot.anchorMin = OutAnchorMin;
+                    _moveRoot.anchorMax = OutAnchorMax;
                     break;
                 case MoveMode.Hide:
-                    moveRoot.anchorMin = OutAnchorMin;
-                    moveRoot.anchorMax = OutAnchorMax;
-                    break;
-                default:
+                    _moveRoot.anchorMin = InAnchorMin;
+                    _moveRoot.anchorMax = InAnchorMax;
                     break;
             }
         }
@@ -50,15 +48,15 @@ namespace UI.PausePanelTween
                     anchorMin = OutAnchorMin;
                     anchorMax = OutAnchorMax;
                     break;
-                default:
-                    break;
             }
+            
+            Debug.Log(anchorMin + "     " + anchorMax);
 
-            const float totalMoveDuration = 0.5f;
-            const Ease moveEase = Ease.InOutBack;
+            const float TOTAL_MOVE_DURATION = 0.5f;
+            const Ease MOVE_EASE = Ease.InOutBack;
             return DOTween.Sequence()
-                .Append(moveRoot.DOAnchorMin(anchorMin, totalMoveDuration * timeScale).SetEase(moveEase))
-                .Join(moveRoot.DOAnchorMax(anchorMax, totalMoveDuration * timeScale).SetEase(moveEase));
+                .Append(_moveRoot.DOAnchorMin(anchorMin, TOTAL_MOVE_DURATION * timeScale).SetEase(MOVE_EASE))
+                .Join(_moveRoot.DOAnchorMax(anchorMax, TOTAL_MOVE_DURATION * timeScale).SetEase(MOVE_EASE));
         }
     }
 }

@@ -20,21 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,10 +97,10 @@
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1lYmk8YdisCpvRfPgqMCH1bi0yH" />
@@ -195,7 +183,8 @@
       <workItem from="1611510784141" duration="1773000" />
       <workItem from="1611567023382" duration="1445000" />
       <workItem from="1611585429095" duration="6023000" />
-      <workItem from="1611660155358" duration="11162000" />
+      <workItem from="1611660155358" duration="11306000" />
+      <workItem from="1611742842576" duration="627000" />
     </task>
     <servers />
   </component>
