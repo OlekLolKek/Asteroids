@@ -19,12 +19,10 @@ namespace UI
 
         private ISidePanelElementTween[] _elementTweens;
         private Sequence _moveSequence;
-        private float _hiddenPosition;
 
         private readonly PauseModel _pauseModel;
         private readonly Button _resumeButton;
         private readonly Button _exitButton;
-        private readonly float _shownPosition;
         private readonly float _tweenTime;
 
         public Canvas Canvas { get; }
@@ -42,15 +40,11 @@ namespace UI
 
             _pauseModel = pauseModel;
             ReadyToPause += _pauseModel.Pause;
-
             OnPanelSwitched += _pauseModel.PausePanelSwitched;
-
-            _shownPosition = _view.ShownPosition;
-            _hiddenPosition = _view.HiddenPosition;
+            
             _tweenTime = _view.TweenTime;
             Canvas = _view.Canvas;
             Image = _view.Image;
-
             _resumeButton = _view.ResumeButton;
             _exitButton = _view.ExitButton;
 
@@ -71,7 +65,6 @@ namespace UI
             };
             
             ShowPausePanel();
-            //_hiddenPosition = -Image.rectTransform.sizeDelta.x * Canvas.scaleFactor;
         }
 
         private Sequence Move(MoveMode mode)
@@ -116,34 +109,8 @@ namespace UI
         private void ShowPausePanel()
         {
             Move(MoveMode.Show).AppendCallback(() => { _view.gameObject.SetActive(true); });
-            _elementTweens.ForEach(t => t.GoToEnd(MoveMode.Hide));
+            _elementTweens.ForEach(t => t.GoToEnd(MoveMode.Show));
         }
-
-        // private IEnumerator HidePanel()
-        // {
-        //     OnPanelSwitched.Invoke(false);
-        //
-        //     ReadyToPause.Invoke(false);
-        //     
-        //     yield return 0;
-        //     
-        //     _view.transform.DOMoveX(_hiddenPosition, _tweenTime);
-        //     yield return new WaitForSeconds(_tweenTime);
-        //     _view.gameObject.SetActive(false);
-        // }
-        //
-        // private IEnumerator ShowPanel()
-        // {
-        //     OnPanelSwitched.Invoke(true);
-        //     
-        //     _view.gameObject.SetActive(true);
-        //     _view.transform.DOMoveX(_shownPosition, _tweenTime);
-        //     yield return new WaitForSeconds(_tweenTime);
-        //
-        //     yield return 0;
-        //     
-        //     ReadyToPause.Invoke(true);
-        // }
 
         public void Cleanup()
         {
