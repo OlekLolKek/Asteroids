@@ -115,8 +115,6 @@ namespace Controllers
             {
                 coroutine.Dispose();
             }
-            
-            _bulletPool.DeletePool();
         }
     }
 }
