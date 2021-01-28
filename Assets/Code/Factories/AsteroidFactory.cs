@@ -13,7 +13,7 @@ namespace DefaultNamespace
         {
             if (!_created)
             {
-                _instance = new GameObject(NameManager.ASTEROID);
+                _instance = new GameObject(ObjectNames.ASTEROID);
 
                 _instance.AddComponent<SpriteRenderer>().sprite = data.AsteroidSprite;
 
@@ -27,7 +27,7 @@ namespace DefaultNamespace
 
                 var enemyCollision = _instance.AddComponent<EnemyCollision>();
 
-                _instance.tag = TagManager.ENEMY_TAG;
+                _instance.tag = Tags.ENEMY_TAG;
 
                 _instance.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
 

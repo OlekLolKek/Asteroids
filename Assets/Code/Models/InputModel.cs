@@ -15,12 +15,12 @@
 
         public InputModel()
         {
-            _pcInputHorizontal = new PCInputAxis(AxisManager.HORIZONTAL);
-            _pcInputVertical = new PCInputAxis(AxisManager.VERTICAL);
-            _pcInputMouseX = new PCInputAxis(AxisManager.MOUSE_X);
-            _pcInputMouseY = new PCInputAxis(AxisManager.MOUSE_Y);
-            _pcInputPause = new PCInputKey(AxisManager.PAUSE);
-            _pcInputActiveSkill = new PCInputKey(AxisManager.ABILITY);
+            _pcInputHorizontal = new PCInputAxis(AxisNames.HORIZONTAL);
+            _pcInputVertical = new PCInputAxis(AxisNames.VERTICAL);
+            _pcInputMouseX = new PCInputAxis(AxisNames.MOUSE_X);
+            _pcInputMouseY = new PCInputAxis(AxisNames.MOUSE_Y);
+            _pcInputPause = new PCInputKey(AxisNames.PAUSE);
+            _pcInputActiveSkill = new PCInputKey(AxisNames.ABILITY);
         }
 
         public (IInputChangeAxis horizontal, IInputChangeAxis vertical) GetInputKeyboard()

@@ -1,6 +1,7 @@
 ﻿using DefaultNamespace;
 using UnityEngine;
 
+
 namespace Abilities
 {
     public interface IActiveAbility : IAbility, IExecutable, ICleanable

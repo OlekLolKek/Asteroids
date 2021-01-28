@@ -23,6 +23,7 @@ namespace Controllers
 
         #endregion
         
+        
         public MoveController((IInputChangeAxis horizontal, IInputChangeAxis vertical) input,
             PlayerData playerData, Transform playerTransform)
         {

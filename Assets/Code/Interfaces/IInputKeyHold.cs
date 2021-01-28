@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace DefaultNamespace
 {
     public interface IInputKeyHold

@@ -7,7 +7,7 @@ namespace DefaultNamespace
     public sealed class PCInputKeyHold : IInputKeyHold
     {
         public event Action<bool> OnKeyHeld = delegate(bool b) {  };
-        private KeyCode _keyCode;
+        private readonly KeyCode _keyCode;
         
         public PCInputKeyHold(KeyCode keyCode)
         {

@@ -13,7 +13,7 @@ namespace DefaultNamespace
         {
             if (!_created)
             {
-                _instance = new GameObject(NameManager.LASER);
+                _instance = new GameObject(ObjectNames.LASER);
 
                 _instance.layer = data.Layer;
                 
@@ -28,7 +28,7 @@ namespace DefaultNamespace
 
                 var bulletCollision = _instance.AddComponent<BulletCollision>();
 
-                _instance.tag = TagManager.BULLET_TAG;
+                _instance.tag = Tags.BULLET_TAG;
 
                 _instance.transform.localScale = new Vector3(data.SpriteScale, data.SpriteScale);
 
@@ -39,7 +39,7 @@ namespace DefaultNamespace
             else
             {
                 _instance = Object.Instantiate(_instance);
-                _instance.name = NameManager.LASER;
+                _instance.name = ObjectNames.LASER;
 
                 var bulletCollision = _instance.GetComponent<BulletCollision>();
                 var rigidbody2D = _instance.GetComponent<Rigidbody2D>();

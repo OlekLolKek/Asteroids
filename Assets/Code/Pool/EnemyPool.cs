@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Controllers;
+using Enums;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -28,7 +29,7 @@ namespace DefaultNamespace
             _enemyData = enemyData;
             if (!_poolRoot)
             {
-                _poolRoot = new GameObject(NameManager.POOL_ASTEROIDS).transform;
+                _poolRoot = new GameObject(ObjectNames.POOL_ASTEROIDS).transform;
             }
         }
 

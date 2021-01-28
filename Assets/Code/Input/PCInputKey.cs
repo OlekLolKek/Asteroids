@@ -1,12 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
     public sealed class PCInputKey : IInputKeyPress
     {
         public event Action OnKeyPressed = delegate() {  };
-        private KeyCode _keyCode;
+        private readonly KeyCode _keyCode;
         
         public PCInputKey(KeyCode keyCode)
         {

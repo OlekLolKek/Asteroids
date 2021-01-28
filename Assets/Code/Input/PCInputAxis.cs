@@ -1,12 +1,13 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace DefaultNamespace
 {
     public sealed class PCInputAxis : IInputChangeAxis
     {
         public event Action<float> OnAxisChanged = delegate(float f) {  };
-        private string _axisName;
+        private readonly string _axisName;
         
         public PCInputAxis(string axisName)
         {

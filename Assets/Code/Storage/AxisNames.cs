@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 
+
 namespace DefaultNamespace
 {
-    public sealed class AxisManager
+    public static class AxisNames
     {
         public const string HORIZONTAL = "Horizontal";
         public const string VERTICAL = "Vertical";

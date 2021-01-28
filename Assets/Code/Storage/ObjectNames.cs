@@ -1,6 +1,6 @@
 ﻿namespace DefaultNamespace
 {
-    public static class NameManager
+    public static class ObjectNames
     {
         public const string POOL_ASTEROIDS = "AsteroidPool";
         public const string POOL_BULLETS = "BulletPool";

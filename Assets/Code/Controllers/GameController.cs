@@ -8,12 +8,12 @@ namespace Controllers
     public class GameController : MonoBehaviour
     {
         [SerializeField] private Data _data;
-        private global::Controllers.ControllerList _controllerList;
+        private ControllerList _controllerList;
 
 
         private void Start()
         {
-            _controllerList = new global::Controllers.ControllerList();
+            _controllerList = new ControllerList();
             
             var asteroidFactory = new AsteroidFactory();
             var playerFactory = new PlayerFactory(_data.PlayerData);

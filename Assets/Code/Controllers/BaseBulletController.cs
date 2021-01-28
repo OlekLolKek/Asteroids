@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Controllers
 {
-    public sealed class BaseBulletController : ICleanable
+    public class BaseBulletController : ICleanable
     {
         public event Action<int> OnBulletHit = delegate {  };
         

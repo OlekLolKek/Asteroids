@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Controllers;
+using Enums;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -25,7 +26,7 @@ namespace DefaultNamespace
             _bulletData = bulletData;
             if (!_poolRoot)
             {
-                _poolRoot = new GameObject(NameManager.POOL_BULLETS).transform;
+                _poolRoot = new GameObject(ObjectNames.POOL_BULLETS).transform;
             }
         }
 

@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 
+
 namespace Abilities
 {
     [CreateAssetMenu(fileName = "AbilityData", menuName = "Data/AbilityData")]
-    public class ExplosionData : ScriptableObject, IActiveAbilityData
+    public sealed class ExplosionData : ScriptableObject, IActiveAbilityData
     {
         [SerializeField] private GameObject _prefab;
         [SerializeField] private int _damage;

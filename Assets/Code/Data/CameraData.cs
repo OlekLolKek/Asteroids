@@ -5,7 +5,7 @@ using UnityEngine.Rendering.PostProcessing;
 namespace DefaultNamespace
 {
     [CreateAssetMenu(fileName = "CameraData", menuName = "Data/Camera")]
-    public class CameraData : ScriptableObject
+    public sealed class CameraData : ScriptableObject
     {
         #region Fields
 

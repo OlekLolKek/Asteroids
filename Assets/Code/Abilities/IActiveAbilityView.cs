@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace Abilities
 {
     public interface IActiveAbilityView
