@@ -20,8 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e020b8a7-2cca-456e-856d-661705839702" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Asteroids/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Data/CameraData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,15 +48,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/22/af0ecd1d/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/c9/9101106d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/23A7799D-A2E9-41B8-8C6D-B790C607D655/35/4e4aa7e1/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://E:/Programs/Apps/Unity/2019.3.14f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/UI/Core/CanvasUpdateRegistry.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/62FFEEB7-EC02-4BEA-B61E-5FBF8D44AC5B/fa/539aaf4f/ExceptionArgument.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0B76D74C-9007-4047-ADC3-E5DBD5D3F1DE/69/a3085dc0/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0EBEB27C-A6DF-45BB-AEEC-500DC98FF733/35/11410d07/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -96,10 +97,10 @@
       <option value="$PROJECT_DIR$/Assets/Code/Factories/CameraFactory.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/MoveMode.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/ISidePanelElementTween.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/Extensions.cs" />
-      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanel.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelTween/SidePanelTween.cs" />
+      <option value="$PROJECT_DIR$/Assets/Code/UI/UIController.cs" />
       <option value="$PROJECT_DIR$/Assets/Code/UI/PausePanelController.cs" />
     </changedPaths>
   </component>
@@ -113,8 +114,15 @@
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.github.izhangzhihao.rainbow.brackets.settings.RainbowConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor &amp; Play">
@@ -184,7 +192,10 @@
       <workItem from="1611567023382" duration="1445000" />
       <workItem from="1611585429095" duration="6023000" />
       <workItem from="1611660155358" duration="11306000" />
-      <workItem from="1611742842576" duration="3014000" />
+      <workItem from="1611742842576" duration="3778000" />
+      <workItem from="1611857064695" duration="473000" />
+      <workItem from="1611857585973" duration="1271000" />
+      <workItem from="1611859147773" duration="4510000" />
     </task>
     <servers />
   </component>

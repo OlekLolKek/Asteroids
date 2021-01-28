@@ -10,13 +10,14 @@ namespace UI.PausePanelTween
         private static readonly Vector2 OutAnchorMax = new Vector2(0.0f, 1.0f);
         private static readonly Vector2 InAnchorMax = new Vector2(1.0f, 1.0f);
         private readonly RectTransform _moveRoot;
+        private readonly float _tweenTime;
 
 
-        public SidePanelTween(RectTransform moveRoot)
+        public SidePanelTween(RectTransform moveRoot, float tweenTime)
         {
             _moveRoot = moveRoot;
+            _tweenTime = tweenTime;
         }
-
 
         public void GoToEnd(MoveMode mode)
         {
@@ -33,7 +34,6 @@ namespace UI.PausePanelTween
             }
         }
 
-
         public Sequence Move(MoveMode mode, float timeScale)
         {
             Vector2 anchorMin = Vector2.zero;
@@ -49,14 +49,11 @@ namespace UI.PausePanelTween
                     anchorMax = OutAnchorMax;
                     break;
             }
-            
-            Debug.Log(anchorMin + "     " + anchorMax);
 
-            const float TOTAL_MOVE_DURATION = 0.5f;
             const Ease MOVE_EASE = Ease.InOutBack;
             return DOTween.Sequence()
-                .Append(_moveRoot.DOAnchorMin(anchorMin, TOTAL_MOVE_DURATION * timeScale).SetEase(MOVE_EASE))
-                .Join(_moveRoot.DOAnchorMax(anchorMax, TOTAL_MOVE_DURATION * timeScale).SetEase(MOVE_EASE));
+                .Append(_moveRoot.DOAnchorMin(anchorMin, _tweenTime * timeScale).SetEase(MOVE_EASE))
+                .Join(_moveRoot.DOAnchorMax(anchorMax, _tweenTime * timeScale).SetEase(MOVE_EASE));
         }
     }
 }

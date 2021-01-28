@@ -67,7 +67,7 @@ namespace UI
                     break;
             }
             
-            _currentPanelController.Execute();
+            _currentPanelController?.Execute();
         }
 
         private void OnPauseKeyPressed()
@@ -113,6 +113,7 @@ namespace UI
             _pause.OnKeyPressed -= OnPauseKeyPressed;
             _pointModel.OnPointsChanged -= OnPointsChanged;
             _enemyPool.OnEnemyKilledAndReturned -= OnEnemyKilled;
+            _pausePanelController.OnResumeButtonPressed += ChangePanelController;
         }
     }
 }

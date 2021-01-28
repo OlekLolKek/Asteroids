@@ -24,6 +24,6 @@ MonoBehaviour:
   _cameraSize: 8
   _playPosition: 0
   _pausePosition: -6
-  _tweenTime: 0.15
+  _tweenTime: 0.25
   _cameraName: Camera
   _assetsPpu: 16

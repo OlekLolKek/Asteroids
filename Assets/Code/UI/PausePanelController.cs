@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using DefaultNamespace;
 using DG.Tweening;
 using UI.PausePanelTween;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -17,6 +19,8 @@ namespace UI
         public event Action<bool> ReadyToPause = delegate(bool b) { };
         public event Action<UiStates> OnResumeButtonPressed = delegate(UiStates states) { };
 
+        private IDisposable _hideCoroutine;
+        private IDisposable _showCoroutine;
         private ISidePanelElementTween[] _elementTweens;
         private Sequence _moveSequence;
 
@@ -25,29 +29,23 @@ namespace UI
         private readonly Button _exitButton;
         private readonly float _tweenTime;
 
-        public Canvas Canvas { get; }
-        public Image Image { get; }
-
 
         public PausePanelController(PauseModel pauseModel)
         {
             _view = Object.FindObjectOfType<PausePanel>();
             
+            _resumeButton = _view.ResumeButton;
+            _exitButton = _view.ExitButton;
+            _tweenTime = _view.TweenTime;
+            
             _elementTweens = new ISidePanelElementTween[]
             {
-                new SidePanelTween(_view.RectTransform),
+                new SidePanelTween(_view.RectTransform, _tweenTime),
             };
 
             _pauseModel = pauseModel;
             ReadyToPause += _pauseModel.Pause;
             OnPanelSwitched += _pauseModel.PausePanelSwitched;
-            
-            _tweenTime = _view.TweenTime;
-            Canvas = _view.Canvas;
-            Image = _view.Image;
-            _resumeButton = _view.ResumeButton;
-            _exitButton = _view.ExitButton;
-
             _resumeButton.onClick.AddListener(Resume);
             _exitButton.onClick.AddListener(Exit);
         }
@@ -55,13 +53,14 @@ namespace UI
         public void Initialize()
         {
             _elementTweens.ForEach(t => t.GoToEnd(MoveMode.Hide));
+            _view.gameObject.SetActive(false);
         }
 
         public override void Execute()
         {
             _elementTweens = new ISidePanelElementTween[]
             {
-                new SidePanelTween(_view.RectTransform),
+                new SidePanelTween(_view.RectTransform, _tweenTime),
             };
             
             ShowPausePanel();
@@ -69,8 +68,6 @@ namespace UI
 
         private Sequence Move(MoveMode mode)
         {
-            //TODO: add the touchBlocker if some bugs appear
-
             float timeScale = 1.0f;
             if (_moveSequence != null)
             {
@@ -93,23 +90,41 @@ namespace UI
         private void Resume()
         {
             HidePausePanel();
-            OnResumeButtonPressed.Invoke(UiStates.None);
+            ResumeButtonPress().ToObservable().Subscribe();
         }
 
         private void Exit()
         {
-            Close();
+            Application.Quit();
+        }
+
+        private IEnumerator ResumeButtonPress()
+        {
+            yield return new WaitForSeconds(_tweenTime);
+            OnResumeButtonPressed.Invoke(UiStates.None);
+        }
+
+        private IEnumerator Pause()
+        {
+            yield return new WaitForSeconds(_tweenTime);
+            ReadyToPause.Invoke(true);
         }
 
         private void HidePausePanel()
         {
+            _showCoroutine?.Dispose();
+            ReadyToPause.Invoke(false);
+            OnPanelSwitched.Invoke(false);
             Move(MoveMode.Hide).AppendCallback(() => { _view.gameObject.SetActive(false); });
         }
 
         private void ShowPausePanel()
         {
-            Move(MoveMode.Show).AppendCallback(() => { _view.gameObject.SetActive(true); });
+            OnPanelSwitched.Invoke(true);
+            _view.gameObject.SetActive(true);
+            Move(MoveMode.Show);
             _elementTweens.ForEach(t => t.GoToEnd(MoveMode.Show));
+            _showCoroutine = Pause().ToObservable().Subscribe();
         }
 
         public void Cleanup()
