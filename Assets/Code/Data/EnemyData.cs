@@ -4,7 +4,7 @@
 namespace DefaultNamespace
 {
     [CreateAssetMenu(fileName = "EnemyData", menuName = "Data/Enemy")]
-    public class EnemyData : ScriptableObject
+    public sealed class EnemyData : ScriptableObject
     {
         #region Fields
         

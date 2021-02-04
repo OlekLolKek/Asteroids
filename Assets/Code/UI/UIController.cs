@@ -1,83 +1,95 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Numerics;
+using Controllers;
 using DefaultNamespace;
-using UnityEngine;
-using Object = UnityEngine.Object;
 
 
-namespace Command
+namespace UI
 {
-    public class UIController : ICleanable
+    public sealed class UIController : ICleanable
     {
+        private readonly ControllerList _controllers;
+        
         private readonly PointModel _pointModel;
-        private readonly ScorePanel _scorePanel;
-        private readonly PausePanel _pausePanel;
-        private readonly NullPanel _nullPanel;
-        private readonly Stack<UiStates> _uiStates = new Stack<UiStates>();
+        private readonly EnemyPool _enemyPool;
+        
+        private readonly LastEnemyKilledPanelController _lastEnemyKilledPanelController;
+        private readonly ScorePanelController _scorePanelController;
+        private readonly PausePanelController _pausePanelController;
+        private readonly NullPanelController _nullPanelController;
 
         private readonly IInputKeyPress _pause;
         
-        private BaseUI _currentPanel;
+        private BasePanelController _currentPanelController;
 
 
-        public UIController(InputModel inputModel, PointModel pointModel)
+        public UIController(InputModel inputModel, PointModel pointModel, 
+            EnemyPool enemyPool, PauseModel pauseModel)
         {
+            _controllers = new ControllerList();
+            
             _pause = inputModel.Pause();
             _pause.OnKeyPressed += OnPauseKeyPressed;
 
             _pointModel = pointModel;
             _pointModel.OnPointsChanged += OnPointsChanged;
 
-            _scorePanel = Object.FindObjectOfType<ScorePanel>();
-            _scorePanel.SetText("0");
-            _pausePanel = Object.FindObjectOfType<PausePanel>();
-            _nullPanel = Object.FindObjectOfType<NullPanel>();
-            
-            _pausePanel.Close();
+            _enemyPool = enemyPool;
+            _enemyPool.OnEnemyKilledAndReturned += OnEnemyKilled;
 
-            _currentPanel = _nullPanel;
+            _lastEnemyKilledPanelController = new LastEnemyKilledPanelController();
+            _scorePanelController = new ScorePanelController();
+            _pausePanelController = new PausePanelController(pauseModel);
+            _nullPanelController = new NullPanelController();
+
+            _controllers.Add(_pausePanelController);
+            
+            _scorePanelController.SetText("0");
+            _pausePanelController.Close();
+            _pausePanelController.OnResumeButtonPressed += ChangePanelController;
+
+            _currentPanelController = _nullPanelController;
+            
+            _controllers.Initialize();
         }
 
-        private void ChangePanel(UiStates uiStates, bool save = true)
+        private void ChangePanelController(UiStates uiStates)
         {
-            if (_currentPanel != null)
-            {
-                _currentPanel.Close();
-            }
+            _currentPanelController?.Close();
 
             switch (uiStates)
             {
                 case UiStates.None:
-                    _currentPanel = _nullPanel;
+                    _currentPanelController = _nullPanelController;
                     break;
                 case UiStates.PausePanel:
-                    _currentPanel = _pausePanel;
+                    _currentPanelController = _pausePanelController;
                     break;
             }
             
-            _currentPanel.Execute();
-            if (save)
-            {
-                _uiStates.Push(uiStates);
-            }
+            _currentPanelController?.Execute();
         }
 
         private void OnPauseKeyPressed()
         {
-            if (_currentPanel != _nullPanel)
+            if (_currentPanelController != _nullPanelController)
             {
-                ChangePanel(UiStates.None);
+                ChangePanelController(UiStates.None);
             }
             else
             {
-                ChangePanel(UiStates.PausePanel);
+                ChangePanelController(UiStates.PausePanel);
             }
         }
-
+        
+        private void OnEnemyKilled(BaseEnemyController enemy)
+        {
+            _lastEnemyKilledPanelController.SetKilledEnemy(enemy);
+        }
+        
         private void OnPointsChanged(BigInteger points)
         {
-            _scorePanel.SetText(PointsToAbbreviation(points));
+            _scorePanelController.SetText(PointsToAbbreviation(points));
         }
 
         private string PointsToAbbreviation(BigInteger points)
@@ -100,6 +112,8 @@ namespace Command
         {
             _pause.OnKeyPressed -= OnPauseKeyPressed;
             _pointModel.OnPointsChanged -= OnPointsChanged;
+            _enemyPool.OnEnemyKilledAndReturned -= OnEnemyKilled;
+            _pausePanelController.OnResumeButtonPressed += ChangePanelController;
         }
     }
 }

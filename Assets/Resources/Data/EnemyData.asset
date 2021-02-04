@@ -20,7 +20,7 @@ MonoBehaviour:
   _minXPosition: -8.5
   _maxXPosition: 8.5
   _ySpawnOffset: 15
-  _colliderRadius: 0.3545
+  _colliderRadius: 0.5
   _asteroidPoolSize: 3
   _pointsPerEnemy: 250
   _mass: 250

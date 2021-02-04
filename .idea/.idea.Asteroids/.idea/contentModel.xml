@@ -3,7 +3,6 @@
   <component name="ContentModelStore">
     <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.3\extResources" t="IncludeRecursive" />
     <e p="C:\Users\notdn\AppData\Local\JetBrains\Rider2020.3\resharper-host\Local\Transient\Rider\v203\SolutionCaches\_Asteroids.-61067163.00" t="ExcludeRecursive" />
-    <e p="C:\Users\notdn\AppData\Roaming\JetBrains\Rider2020.3\scratches" t="IncludeRecursive" />
     <e p="C:\Users\notdn\OneDrive\Рабочий стол\Asteroids" t="IncludeRecursive">
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -19,21 +18,17 @@
             <e p="IActiveAbility.cs" t="Include" />
             <e p="IActiveAbilityData.cs" t="Include" />
             <e p="IActiveAbilityView.cs" t="Include" />
-            <e p="Target.cs" t="Include" />
-          </e>
-          <e p="ChainOfResponsibility" t="Include">
-            <e p="PlayerModifier.cs" t="Include" />
-            <e p="ShootCooldownModifier.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
             <e p="AsteroidController.cs" t="Include" />
             <e p="BaseBulletController.cs" t="Include" />
             <e p="BaseEnemyController.cs" t="Include" />
             <e p="CameraController.cs" t="Include" />
-            <e p="Controllers.cs" t="Include" />
+            <e p="ControllerList.cs" t="Include" />
             <e p="GameController.cs" t="Include" />
             <e p="InputController.cs" t="Include" />
             <e p="MoveController.cs" t="Include" />
+            <e p="PauseController.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="ShootController.cs" t="Include" />
           </e>
@@ -73,12 +68,6 @@
             <e p="ILateExecutable.cs" t="Include" />
             <e p="IUnit.cs" t="Include" />
           </e>
-          <e p="Managers" t="Include">
-            <e p="AxisManager.cs" t="Include" />
-            <e p="NameManager.cs" t="Include" />
-            <e p="PathManager.cs" t="Include" />
-            <e p="TagManager.cs" t="Include" />
-          </e>
           <e p="Models" t="Include">
             <e p="CameraModel.cs" t="Include" />
             <e p="Health.cs" t="Include" />
@@ -90,24 +79,30 @@
             <e p="BulletPool.cs" t="Include" />
             <e p="EnemyPool.cs" t="Include" />
           </e>
-          <e p="Test" t="Include">
-            <e p="ServiceLocator" t="Include">
-              <e p="IService.cs" t="Include" />
-              <e p="Service.cs" t="Include" />
-              <e p="ServiceLocator.cs" t="Include" />
-              <e p="ServiceLocatorMonoBehaviour.cs" t="Include" />
-            </e>
-            <e p="Singleton" t="Include">
-              <e p="Services.cs" t="Include" />
-              <e p="SingletonMonoBehaviour.cs" t="Include" />
-            </e>
-            <e p="Test.cs" t="Include" />
+          <e p="Storage" t="Include">
+            <e p="AxisNames.cs" t="Include" />
+            <e p="ObjectNames.cs" t="Include" />
+            <e p="ResourcesPaths.cs" t="Include" />
+            <e p="Tags.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
-            <e p="BaseUI.cs" t="Include" />
+            <e p="BasePanel.cs" t="Include" />
+            <e p="BasePanelController.cs" t="Include" />
+            <e p="LastEnemyKilledPanel.cs" t="Include" />
+            <e p="LastEnemyKilledPanelController.cs" t="Include" />
             <e p="NullPanel.cs" t="Include" />
+            <e p="NullPanelController.cs" t="Include" />
+            <e p="PauseModel.cs" t="Include" />
             <e p="PausePanel.cs" t="Include" />
+            <e p="PausePanelController.cs" t="Include" />
+            <e p="PausePanelTween" t="Include">
+              <e p="Extensions.cs" t="Include" />
+              <e p="ISidePanelElementTween.cs" t="Include" />
+              <e p="MoveMode.cs" t="Include" />
+              <e p="SidePanelTween.cs" t="Include" />
+            </e>
             <e p="ScorePanel.cs" t="Include" />
+            <e p="ScorePanelController.cs" t="Include" />
             <e p="UIController.cs" t="Include" />
             <e p="UiStates.cs" t="Include" />
           </e>

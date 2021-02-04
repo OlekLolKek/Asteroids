@@ -1,9 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
+
 namespace Abilities
 {
-    public class ActiveAbilityView : MonoBehaviour, IActiveAbilityView
+    public sealed class ActiveAbilityView : MonoBehaviour, IActiveAbilityView
     {
         public event Action<Collision2D> OnCollision = delegate(Collision2D collision2D) {  };
 

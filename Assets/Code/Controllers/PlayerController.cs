@@ -1,19 +1,18 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Abilities;
-using UnityEngine;
+﻿using Abilities;
+using DefaultNamespace;
+using UI;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public sealed class PlayerController : IExecutable, ICleanable
     {
-        private readonly Controllers _controllers;
+        private readonly ControllerList _controllerList;
 
         public PlayerController(Data data, InputModel inputModel,
-            PlayerModel playerModel)
+            PlayerModel playerModel, PauseModel pauseModel)
         {
-            _controllers = new Controllers();
+            _controllerList = new ControllerList();
             
             var cameraFactory = new CameraFactory(data.CameraData);
             var laserFactory = new LaserFactory();
@@ -26,24 +25,24 @@ namespace DefaultNamespace
             var shootController = new ShootController(data.BulletData, playerModel, laserFactory);
             
             var cameraController = new CameraController(cameraModel, playerModel,
-                data.CameraData);
+                data.CameraData, pauseModel);
 
             var explosion = new Explosion(data.ExplosionData, playerModel);
             
             var abilityController = new AbilityController(inputModel, explosion);
 
-            _controllers.Add(moveController).Add(shootController).
+            _controllerList.Add(moveController).Add(shootController).
                 Add(cameraController).Add(abilityController).Initialize();
         }
         
         public void Execute(float deltaTime)
         {
-            _controllers.Execute(deltaTime);
+            _controllerList.Execute(deltaTime);
         }
 
         public void Cleanup()
         {
-            _controllers.Cleanup();
+            _controllerList.Cleanup();
         }
     }
 }

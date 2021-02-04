@@ -7,8 +7,7 @@ namespace DefaultNamespace
     public class BulletData : ScriptableObject
     {
         #region Fields
-
-        [SerializeField] private Rigidbody2D _laserPrefab;
+        
         [SerializeField] private Sprite _bulletSprite;
         [SerializeField] private Vector2 _bulletColliderSize;
         [SerializeField] private float _shootForce;
@@ -19,8 +18,7 @@ namespace DefaultNamespace
         [SerializeField] private int _layer;
 
         #endregion
-
-        public Rigidbody2D LaserPrefab => _laserPrefab;
+        
         public Sprite BulletSprite => _bulletSprite;
         public Vector2 BulletColliderSize => _bulletColliderSize;
         public float ShootForce => _shootForce;

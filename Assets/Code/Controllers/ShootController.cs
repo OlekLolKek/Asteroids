@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
+using Enums;
 using UniRx;
 using UnityEngine;
 
-namespace DefaultNamespace
+
+namespace Controllers
 {
-    public class ShootController : IExecutable, ICleanable
+    public sealed class ShootController : IExecutable, ICleanable
     {
         #region Fields
 
@@ -35,11 +38,9 @@ namespace DefaultNamespace
             var poolSize = (int) Math.Ceiling(ratio);
             _bulletPool = new BulletPool(poolSize, _data, laserFactory);
 
-
             _playerModel = playerModel;
             _barrelTransform = _playerModel.BarrelTransform;
             _audioSource = _playerModel.AudioSource;
-            _playerModel.OnShootCooldownChanged += SetShootCooldown;
 
             _bulletLifespan = _data.BulletLifespan;
             _shootCooldown = _data.ShootCooldown;
@@ -103,21 +104,17 @@ namespace DefaultNamespace
             }
         }
 
-        private void SetShootCooldown(float cooldown)
-        {
-            Debug.Log("SetShootCooldown");
-            Debug.Log($"{nameof(_shootCooldown)} set to {cooldown}");
-            _shootCooldown = cooldown;
-        }
-
-        private void ResetShootCooldown()
-        {
-            _shootCooldown = _data.ShootCooldown;
-        }
-
         public void Cleanup()
         {
-            _playerModel.OnShootCooldownChanged -= SetShootCooldown;
+            foreach (var bullet in _bullets)
+            {
+                bullet.Cleanup();
+            }
+
+            foreach (var coroutine in _coroutines)
+            {
+                coroutine.Dispose();
+            }
         }
     }
 }

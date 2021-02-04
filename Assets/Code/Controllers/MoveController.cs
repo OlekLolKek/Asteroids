@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public sealed class MoveController : IExecutable, ICleanable
     {
@@ -21,6 +22,7 @@ namespace DefaultNamespace
         private readonly float _speed;
 
         #endregion
+        
         
         public MoveController((IInputChangeAxis horizontal, IInputChangeAxis vertical) input,
             PlayerData playerData, Transform playerTransform)

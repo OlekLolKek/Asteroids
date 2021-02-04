@@ -1,26 +1,29 @@
 ﻿using System;
+using DefaultNamespace;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-namespace DefaultNamespace
+namespace Controllers
 {
     public class BaseEnemyController
     {
-        public event Action<int> OnEnemyKilled = delegate {  };
+        public event Action<BaseEnemyController> OnEnemyKilled = delegate {  };
+        
+        private Transform _poolRoot;
+        private Transform _player;
         
         private readonly GameObject _instance;
         private readonly Rigidbody2D _rigidbody2D;
         private readonly Vector2 _flyVelocity;
-        
-        private Transform _poolRoot;
-        private Transform _player;
-        private Health _health;
-        
+        private readonly Health _health;
+
         private readonly float _yOffset;
         private readonly float _minX;
         private readonly float _maxX;
 
+
+        public string Name => _instance.name;
 
         public bool IsActive
         {
@@ -31,13 +34,12 @@ namespace DefaultNamespace
 
         public BaseEnemyController(EnemyData enemyData, IEnemyFactory factory)
         {
-            var enemy = factory.Create(enemyData);
-            _instance = enemy.instance;
+            var (instance, collision, rigidbody2D) = factory.Create(enemyData);
+            _instance = instance;
 
-            var collision = enemy.collision;
             collision.OnEnemyHit += EnemyHit;
 
-            _rigidbody2D = enemy.rigidbody2D;
+            _rigidbody2D = rigidbody2D;
 
             _yOffset = enemyData.YSpawnOffset;
             _minX = enemyData.MinXPosition;
@@ -75,7 +77,7 @@ namespace DefaultNamespace
         {
             if (_health.TryKill(damage))
             {
-                OnEnemyKilled.Invoke(ID);
+                OnEnemyKilled.Invoke(this);
             }
         }
     }

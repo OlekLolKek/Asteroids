@@ -1,16 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using DefaultNamespace;
-using Random = UnityEngine.Random;
+﻿using DefaultNamespace;
 
 
 namespace Abilities
 {
-    public class AbilityController : IExecutable, ICleanable
+    public sealed class AbilityController : IExecutable, ICleanable
     {
-        private IActiveAbility _activeAbility;
-        private InputModel _inputModel;
+        private readonly IActiveAbility _activeAbility;
+        private readonly InputModel _inputModel;
 
 
         public AbilityController(InputModel inputModel, IActiveAbility activeAbility)

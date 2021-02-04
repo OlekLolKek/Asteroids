@@ -1,4 +1,7 @@
-﻿namespace DefaultNamespace
+﻿using DefaultNamespace;
+
+
+namespace Controllers
 {
     public sealed class InputController : IExecutable
     {

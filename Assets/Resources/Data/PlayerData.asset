@@ -16,5 +16,5 @@ MonoBehaviour:
   _speed: 7.5
   _maxLeft: -9
   _maxRight: 9
-  _shootSfx: {fileID: 8300000, guid: 3d72bccc6b6868346a03f8bd450ef5ca, type: 3}
+  _shootSfx: {fileID: 8300000, guid: 3cc7bb55aa3aa314d9592246c16d9a11, type: 3}
   _shootVolume: 0.25
