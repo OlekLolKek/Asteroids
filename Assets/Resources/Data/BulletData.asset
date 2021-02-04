@@ -18,5 +18,7 @@ MonoBehaviour:
   _bulletColliderSize: {x: 0.02000334, y: 0.07261292}
   _shootForce: 2000
   _bulletLifespan: 1
-  _spriteScale: 10
+  _spriteScale: 1
   _shootCooldown: 0.15
+  _damage: 7
+  _layer: 8

@@ -17,3 +17,4 @@ MonoBehaviour:
   _enemyDataPath: EnemyData
   _cameraDataPath: CameraData
   _bulletDataPath: BulletData
+  _explosionDataPath: ExplosionData

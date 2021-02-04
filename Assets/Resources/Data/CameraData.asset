@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb91afbaa149238287e6bef16cf53e, type: 3}
   m_Name: CameraData
   m_EditorClassIdentifier: 
-  _cameraPosition: {x: 0, y: 6.25, z: -10}
+  _particlesPrefab: {fileID: 183190, guid: e9a6501da28be2b4986e8ba47c2e017c, type: 3}
+  _postProcessResources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4,
+    type: 2}
+  _postProcessingLayer:
+    serializedVersion: 2
+    m_Bits: 1024
+  _cameraPosition: {x: 0, y: 4.5, z: -10}
+  _particlesPosition: {x: 0, y: 15, z: 10}
+  _backgroundColor: {r: 0.2509804, g: 0.3137255, b: 0.0627451, a: 0}
   _cameraSize: 8
   _cameraName: Camera
+  _assetsPPU: 16
